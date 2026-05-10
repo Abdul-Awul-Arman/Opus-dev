@@ -1,26 +1,66 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Site Background: Light Grayish Blue (rgb(234, 239, 245)) */
+  --color-surface-main: #eaeff5;
+  --color-surface-light: #f4f4f4;
+  --color-surface-border: #d4d4d4;
+
+  /* Brand Palette */
+  --color-brand-blue: #1735dd;
+  --color-brand-blue-light: #5e76fd;
+  --color-brand-navy-dark: #080e28;
+  --color-brand-navy-muted: #121b60;
+  
+  /* Primary Text Colors */
+  --color-text-primary: var(--color-brand-navy-dark);
+  --color-text-secondary: var(--color-brand-navy-muted);
+  --color-text-white: #ffffff;
+
+  /* Typography */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-instrument), ui-serif, Georgia, serif;
+
+  --text-display-1: 5rem;
+  --text-display-1--line-height: 1.05;
+  --text-display-1--letter-spacing: -0.02em;
+  --text-display-1--font-weight: 400;
+
+  --text-display-2: 4rem;
+  --text-display-2--line-height: 1.1;
+  --text-display-2--letter-spacing: -0.01em;
+  --text-display-2--font-weight: 400;
+
+  --text-title: 2rem;
+  --text-title--line-height: 1.2;
+  --text-title--font-weight: 400;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  body {
+    @apply bg-surface-main text-text-primary font-sans antialiased;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  /* Default headings (Dark for light background) */
+  h1 { @apply font-serif text-display-1 text-text-primary; }
+  h2 { @apply font-serif text-display-2 text-text-secondary; }
+  h3 { @apply font-serif text-title text-text-secondary; }
+  
+  ::selection {
+    @apply bg-brand-blue/20 text-brand-blue;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  /* High Contrast Section Utility (Light text on dark backgrounds) */
+  .dark-contrast {
+    @apply text-text-white;
+    & h1, & h2, & h3, & span {
+      @apply text-text-white;
+    }
+  }
+
+  .container-wide {
+    @apply max-w-[1440px] mx-auto px-6;
+  }
 }
