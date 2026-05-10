@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useRef } from "react";
 import { ArrowUpRight } from "lucide-react";
 import gsap from "gsap";
@@ -20,18 +21,18 @@ const Hero = () => {
       ease: "power3.out",
     })
       .from(navbar.current, {
-        y: -100,
-        opacity: 0,
-        duration: 0.8,
-        ease: "power3.out",
-      }, "-=0.8")
+      y: -100,
+      opacity: 0,
+      duration: 0.8,
+      ease: "power3.out",
+    }, "-=0.8")
       .from(heroContent.current?.children || [], {
-        y: 40,
-        opacity: 0,
-        duration: 1,
-        stagger: 0.15,
-        ease: "power3.out",
-      }, "-=0.4");
+      y: 40,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.15,
+      ease: "power3.out",
+    }, "-=0.4");
   }, { scope: container });
 
   return (
@@ -61,11 +62,17 @@ const Hero = () => {
           className="absolute top-6 left-1/2 -translate-x-1/2 w-[78%] max-w-7xl z-50 flex items-center justify-between px-8 py-4 rounded-[1.25rem] border border-white/15 bg-white/12 backdrop-blur-xl shadow-2xl"
         >
           <div className="flex items-center gap-4">
-            <div className="w-11 h-11 bg-white flex items-center justify-center rounded-xl shadow-lg">
-              <span className="text-brand-navy-dark font-black text-2xl">S</span>
+            <div className="relative w-12 h-12 flex items-center justify-center">
+              <Image 
+                src="/logo.svg" 
+                alt="Opus Logo" 
+                fill
+                className="object-contain"
+                priority
+              />
             </div>
             <div className="flex flex-col">
-              <span className="font-bold text-2xl leading-none tracking-tight">Stratwell</span>
+              <span className="font-bold text-2xl leading-none tracking-tight">Opus</span>
               <span className="text-white/70 text-[9px] font-bold uppercase tracking-[0.3em] mt-1">Consulting</span>
             </div>
           </div>
