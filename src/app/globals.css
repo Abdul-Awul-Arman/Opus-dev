@@ -9,9 +9,9 @@
   /* Brand Palette */
   --color-brand-blue: #1735dd;
   --color-brand-blue-light: #5e76fd;
-  --color-brand-navy-dark: #080e28;
+  --color-brand-navy-dark: #121b60;
   --color-brand-navy-muted: #121b60;
-  
+
   /* Primary Text Colors */
   --color-text-primary: var(--color-brand-navy-dark);
   --color-text-secondary: var(--color-brand-navy-muted);
@@ -42,20 +42,33 @@
   }
 
   /* Default headings (Dark for light background) */
-  h1 { @apply font-serif text-display-1 text-text-primary; }
-  h2 { @apply font-serif text-display-2 text-text-secondary; }
-  h3 { @apply font-serif text-title text-text-secondary; }
-  
+  h1 {
+    @apply font-serif text-display-1 text-text-primary;
+  }
+
+  h2 {
+    @apply font-serif text-display-2 text-text-secondary;
+  }
+
+  h3 {
+    @apply font-serif text-title text-text-secondary;
+  }
+
   ::selection {
     @apply bg-brand-blue/20 text-brand-blue;
   }
 }
 
 @layer utilities {
+
   /* High Contrast Section Utility (Light text on dark backgrounds) */
   .dark-contrast {
     @apply text-text-white;
-    & h1, & h2, & h3, & span {
+
+    & h1,
+    & h2,
+    & h3,
+    & span {
       @apply text-text-white;
     }
   }
