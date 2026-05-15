@@ -1,24 +1,23 @@
 import Hero from "@/components/Hero";
+import IntroStats from "@/components/IntroStats";
+import Services from "@/components/Services";
+import Testimonials from "@/components/Testimonials";
+import OurGoal from "@/components/OurGoal";
+import TrustedBy from "@/components/TrustedBy";
+import CTA from "@/components/CTA";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen flex flex-col">
       <Hero />
-      
-      {/* Other sections can be added here */}
-      <section className="py-20 container-wide">
-        <h2 className="mb-8">Our Services</h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          {[1, 2, 3].map((i) => (
-            <div key={i} className="p-8 bg-white rounded-3xl border border-surface-border shadow-sm hover:shadow-md transition-shadow">
-              <h3 className="mb-4 text-2xl font-bold">Strategy {i}</h3>
-              <p className="text-text-secondary leading-relaxed">
-                Empowering your business with data-driven insights and premium execution.
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
+      <IntroStats />
+      <Services />
+      <Testimonials />
+      <OurGoal />
+      <TrustedBy />
+      <CTA />
+      <Footer />
     </main>
   );
 }

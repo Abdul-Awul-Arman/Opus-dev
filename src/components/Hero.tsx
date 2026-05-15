@@ -4,6 +4,9 @@ import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 
+
+
+
 const Hero = () => {
   return (
     <section className="p-4 md:p-4">
@@ -12,7 +15,7 @@ const Hero = () => {
         initial={{ opacity: 0, scale: 0.98 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.2, ease: "easeOut" }}
-        className="relative w-full h-[100vh] rounded-[1.5rem] overflow-hidden bg-brand-navy-dark  dark-contrast"
+        className="relative w-full h-[100vh] rounded-[1.5rem] overflow-hidden bg-brand-navy-dark  dark-contrast flex flex-col"
       >
         {/* Video Background */}
         <video
@@ -20,23 +23,23 @@ const Hero = () => {
           loop
           muted
           playsInline
-          className="absolute inset-0  object-cover opacity-80"
+          className="absolute inset-0 w-full h-full object-cover object-[center_10%]"
         >
           <source src="https://framerusercontent.com/assets/wgHWlu6sTglBDJ9jxgyB4tfvEY.mp4" type="video/mp4" />
         </video>
 
         {/* Dark Navy Gradient Overlay */}
-        <div className="absolute inset-0 bg-[#080e28]/40" />
+        <div className="absolute inset-0 bg-[#080e2980]" />
 
         {/* Navbar */}
         <motion.nav
-          initial={{ y: -100, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-          className="absolute top-10 left-1/2 -translate-x-1/2 w-[1152px] max-w-[calc(100%-2rem)] h-[80px] z-50 flex items-center justify-between p-[16px] rounded-[1.25rem] border border-white/15 bg-white/12 backdrop-blur-[16px] "
+          className="absolute top-6 left-1/2 -translate-x-1/2 w-[1152px]  h-[80px] z-50 flex items-center justify-between p-[16px] rounded-[16px] border border-white/15 bg-white/12 backdrop-blur-[16px] "
         >
           <div className="flex items-center gap-4">
-            <div className="relative w-28 h-24 flex items-center justify-center">
+            <div className="relative w-26 h-24 flex items-center justify-center">
               <Image
                 src="/logo.svg"
                 alt="Opus Logo"
@@ -61,13 +64,13 @@ const Hero = () => {
             ))}
           </div>
 
-          <button className="bg-white text-brand-navy-dark px-6 py-3 rounded-full text-base font-bold hover:bg-[#ebf1f8] transition-all transform hover:scale-105 shadow-xl">
+          <button className="bg-[#EAEFF5] text-brand-navy-dark px-6 py-3 rounded-full text-base font-bold hover:bg-[#ebf1f8] transition-all transform hover:scale-105 shadow-xl">
             Contact Us
           </button>
         </motion.nav>
 
         {/* Hero Content */}
-        <div className="absolute bottom-22 left-0 w-full px-40 flex flex-row md:items-end justify-between gap-12">
+        <div className="relative z-10 mt-auto pb-30 w-full px-40 flex flex-row md:items-end justify-between">
           <motion.div
             initial="hidden"
             animate="visible"
@@ -96,7 +99,7 @@ const Hero = () => {
             </h1>
           </motion.div>
 
-          <div className="w-[440px] h-[81px]">
+          <div className="w-[440px] flex flex-col gap-8 pb-4">
             <motion.p
               initial={{ y: 40, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
