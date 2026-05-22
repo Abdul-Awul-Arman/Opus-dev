@@ -1,5 +1,3 @@
-import { div } from "framer-motion/client"
-
 export default function Divider() {
   return (
     <div className="flex justify-center">
@@ -13,7 +11,6 @@ export default function Divider() {
     </div>
   );
 }
-
 
 
 

@@ -24,8 +24,8 @@ const stats = [
 
 export default function IntroStats() {
   return (
-    <section className="w-full py-[120px] px-[24px] landing-[76px]">
-      <div className="max-w-[1200px] mx-auto flex flex-col gap-[48px]  ">
+    <section className="w-full px-[24px] py-20 md:py-[120px] landing-[76px]">
+      <div className="max-w-[1200px] mx-auto flex flex-col gap-10 md:gap-[48px]">
         {/* Intro Top */}
         <div className="flex flex-col gap-[24px] ">
           {/* Label Pill */}
@@ -44,7 +44,7 @@ export default function IntroStats() {
             }}
             className="max-w-[1150px]"
           >
-            <h2 className="leading-[1.1] tracking-[-0.01em] font-serif text-brand-navy-dark">
+            <h2 className="text-[44px] leading-[1.08] tracking-[-0.01em] font-serif text-brand-navy-dark md:text-[56px] xl:text-display-2 xl:leading-[1.1]">
               {"Stratwell Consulting is a *results-driven* business consultancy *helping* leaders *navigate* complexity, *refine* strategy, and *achieve* sustainable growth."
                 .split(" ")
                 .map((word, i, arr) => {
@@ -87,7 +87,7 @@ export default function IntroStats() {
               key={index}
               className="bg-white rounded-[28px] p-[24px] flex flex-col gap-6 shadow-[0_8px_30px_rgba(13,27,42,0.02)] border border-brand-navy-dark/[0.04]"
             >
-              <h3 className="text-[64px] font-serif font-normal  text-brand-navy-dark ">
+              <h3 className="text-[56px] md:text-[64px] font-serif font-normal text-brand-navy-dark">
                 {stat.value}
               </h3>
               <p className="text-[16px]  leading-[1.6] text-text-one font-sans font-normal">

@@ -36,7 +36,7 @@ export default function TrustedBy() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
-            className="text-[64px]  leading-[1.1] tracking-[-0.01em] font-serif text-brand-navy-dark"
+            className="text-[44px] md:text-[64px] leading-[1.1] tracking-[-0.01em] font-serif text-brand-navy-dark"
           >
             Trusted By
           </motion.h2>
@@ -53,10 +53,10 @@ export default function TrustedBy() {
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.4, delay: index * 0.05, ease: "easeOut" }}
                 key={index}
-                className="bg-white rounded-[24px] h-[100px] md:h-[120px] flex items-center justify-center gap-3 text-brand-navy-dark "
+                className="bg-white rounded-[24px] h-[100px] md:h-[120px] flex items-center justify-center gap-2 p-3 text-brand-navy-dark md:gap-3"
               >
-                <Icon size={28} strokeWidth={2.5} />
-                <span className="font-bold text-[18px] md:text-[22px] tracking-tight">{logo.text}</span>
+                <Icon size={28} strokeWidth={2.5} className="shrink-0" />
+                <span className="min-w-0 break-words text-center font-bold text-[14px] tracking-tight sm:text-[18px] md:text-[22px]">{logo.text}</span>
               </motion.div>
             );
           })}

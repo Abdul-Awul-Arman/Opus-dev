@@ -30,7 +30,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="w-full px-6 lg:px-12 py-20 lg:py-28">
+    <section id="services" className="w-full px-6 py-20 lg:px-12 lg:py-28">
       <div className="max-w-[1200px] mx-auto flex flex-col gap-12 lg:gap-16">
 
         {/* Header */}
@@ -49,7 +49,7 @@ export default function Services() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
-            className="text-[64px] leading-[1.1] tracking-[-0.01em] font-serif text-brand-navy-dark"
+            className="text-[44px] leading-[1.1] tracking-[-0.01em] font-serif text-brand-navy-dark md:text-[56px] lg:text-[64px]"
           >
             Our <span className="italic">Expertise</span>
           </motion.h2>
@@ -79,7 +79,7 @@ export default function Services() {
                     </div>
                   </div>
                   <div className="flex flex-col gap-4">
-                    <h3 className="text-[32px] font-serif font-normal leading-tight text-brand-navy-dark">
+                    <h3 className="text-[28px] md:text-[32px] font-serif font-normal leading-tight text-brand-navy-dark">
                       {service.title}
                     </h3>
                     <p className="text-[16px] leading-[1.6] text-text-one font-sans font-normal pr-4">
@@ -97,7 +97,7 @@ export default function Services() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-            className="lg:col-span-1 relative rounded-[24px] overflow-hidden min-h-[500px] flex flex-col justify-end group shadow-sm"
+            className="lg:col-span-1 relative rounded-[24px] overflow-hidden min-h-[430px] md:min-h-[500px] flex flex-col justify-end group shadow-sm"
           >
             {/* Background Image */}
             <img

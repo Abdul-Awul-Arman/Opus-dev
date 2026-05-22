@@ -2,19 +2,23 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 interface AnimatedButtonProps {
   text?: string;
   delay?: number;
   className?: string;
+  href?: string;
 }
 
 export default function AnimatedButton({
   text = "Book a Consultation",
   delay = 1.4,
   className = "",
+  href,
 }: AnimatedButtonProps) {
   return (
+    <Link href={href || "#"}>
     <motion.button
       initial={{ y: 40, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
@@ -26,5 +30,6 @@ export default function AnimatedButton({
         <ArrowRight size={20} className="transition-transform duration-300 transform -rotate-45 group-hover/btn:rotate-0" />
       </div>
     </motion.button>
+    </Link>
   );
 }

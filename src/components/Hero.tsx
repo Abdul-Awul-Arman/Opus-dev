@@ -1,22 +1,18 @@
 "use client";
 
-import Image from "next/image";
 import AnimatedButton from "./AnimatedButton";
-import { ArrowUpRight } from "lucide-react";
+import SiteHeader from "./SiteHeader";
 import { motion } from "framer-motion";
-
-
-
 
 const Hero = () => {
   return (
-    <section className="p-4 md:p-4">
+    <section className="p-0 xl:p-4">
       {/* Outer Rounded Container */}
       <motion.div
         initial={{ opacity: 0, scale: 0.98 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.2, ease: "easeOut" }}
-        className="relative w-full h-[100vh] rounded-[1.5rem] overflow-hidden bg-brand-navy-dark  dark-contrast flex flex-col"
+        className="relative w-full h-[645px] md:h-[590px] lg:h-[720px] xl:h-[100vh] rounded-none xl:rounded-[1.5rem] overflow-hidden bg-brand-navy-dark dark-contrast flex flex-col"
       >
         {/* Video Background */}
         <video
@@ -32,46 +28,10 @@ const Hero = () => {
         {/* Dark Navy Gradient Overlay */}
         <div className="absolute inset-0 bg-[#080e2980]" />
 
-        {/* Navbar */}
-        <motion.nav
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-          className="absolute top-6 left-1/2 -translate-x-1/2 w-[1152px]  h-[80px] z-50 flex items-center justify-between p-[16px] rounded-[16px] border border-white/15 bg-white/12  backdrop-blur-[16px] "
-        >
-          <div className="flex items-center gap-4">
-            <div className="relative w-26 h-24 flex items-center justify-center">
-              <Image
-                src="/logo.svg"
-                alt="Opus Logo"
-                fill
-                className="object-contain"
-                priority
-              />
-            </div>
-
-          </div>
-
-          <div className="flex items-center gap-[40px] text-white  font-medium tracking-wide">
-            {["Home", "Services", "About Us", "Case Studies", "FAQs"].map((link) => (
-              <a
-                key={link}
-                href="#"
-                className="relative group text-white tracking-[-1%] transition-opacity text-[16px]"
-              >
-                {link}
-                <span className="absolute -bottom-1.5 left-0 w-full h-[1px] bg-white opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-              </a>
-            ))}
-          </div>
-
-          <button className="bg-[#EAEFF5] text-brand-navy-dark px-6 py-3 rounded-full text-base font-bold hover:bg-[#ebf1f8] transition-all transform hover:scale-105 shadow-xl">
-            Contact Us
-          </button>
-        </motion.nav>
+        <SiteHeader />
 
         {/* Hero Content */}
-        <div className="relative z-10 mt-auto pb-30 w-full px-40 flex flex-row md:items-end justify-between">
+        <div className="relative z-10 flex h-full w-full flex-col justify-end gap-7 px-6 pb-12 pt-[96px] md:pb-24 lg:items-center lg:text-center xl:mt-auto xl:h-auto xl:flex-row xl:items-end xl:justify-between xl:gap-0 xl:px-40 xl:pb-30 xl:pt-0 xl:text-left">
           <motion.div
             initial="hidden"
             animate="visible"
@@ -87,12 +47,12 @@ const Hero = () => {
             }}
             className="max-w-3xl"
           >
-            <h1 className="text-[80px] leading-[100px] tracking-[-1%]">
+            <h1 className="text-[44px] leading-[1.08] tracking-[-0.01em] sm:text-[52px] md:text-[52px] lg:text-[72px] xl:text-[80px] xl:leading-[100px]">
               <motion.div variants={{ hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut" } } }}>
-                Strategy That <br />
+                Strategy That <br className="hidden xl:block" />
               </motion.div>
               <motion.div variants={{ hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut" } } }}>
-                Powers <span className="font-serif italic">Your Next</span> <br />
+                Powers <span className="font-serif italic">Your Next</span> <br className="hidden xl:block" />
               </motion.div>
               <motion.div variants={{ hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut" } } }}>
                 <span className="font-serif italic">Level</span> of <span className="font-serif">Growth</span>.
@@ -100,12 +60,12 @@ const Hero = () => {
             </h1>
           </motion.div>
 
-          <div className="w-[440px] flex flex-col gap-8 pb-4">
+          <div className="flex w-full max-w-[520px] flex-col gap-7 pb-0 lg:items-center xl:w-[440px] xl:items-start xl:gap-8 xl:pb-4">
             <motion.p
               initial={{ y: 40, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 1, delay: 1.25, ease: "easeOut" }}
-              className="text-white text-[18px] "
+              className="text-white text-[18px] leading-[1.45]"
             >
               We help businesses unlock opportunities, scale faster, and achieve measurable results through data-driven strategies.
             </motion.p>

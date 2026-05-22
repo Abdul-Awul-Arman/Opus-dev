@@ -57,7 +57,7 @@ export default function Testimonials() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
-          className="text-[48px] md:text-[64px]  leading-[1.1] tracking-[-0.01em] font-serif text-brand-navy-dark"
+          className="text-[42px] md:text-[64px] leading-[1.1] tracking-[-0.01em] font-serif text-brand-navy-dark"
         >
           What <span className="italic">Our Clients Say</span>
         </motion.h2>
@@ -81,7 +81,7 @@ export default function Testimonials() {
           {[...testimonials, ...testimonials].map((testimonial, index) => (
             <div
               key={index}
-              className="relative shrink-0 w-[320px] md:w-[360px] lg:w-[400px] h-[500px] md:h-[540px] rounded-[28px] overflow-hidden group shadow-sm"
+              className="relative shrink-0 w-[312px] sm:w-[320px] md:w-[360px] lg:w-[400px] h-[500px] md:h-[540px] rounded-[28px] overflow-hidden group shadow-sm"
             >
               {/* Background Placeholder */}
               <div className="absolute inset-0 bg-gradient-to-br from-[#bccae0] to-[#8fa7c9] transition-transform duration-700 group-hover:scale-105" />
@@ -90,14 +90,14 @@ export default function Testimonials() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent opacity-80" />
               
               {/* Content Glass Box */}
-              <div className="absolute bottom-4 left-4 right-4 z-10 p-6 rounded-[20px] bg-[#2a2c33]/70 backdrop-blur-md border border-white/10 flex flex-col gap-6 shadow-2xl transition-all duration-300">
+              <div className="absolute bottom-4 left-4 right-4 z-10 p-5 md:p-6 rounded-[20px] bg-[#2a2c33]/70 backdrop-blur-md border border-white/10 flex flex-col gap-6 shadow-2xl transition-all duration-300">
                 <p className="text-white text-[15px] leading-[1.6] font-medium">
-                  "{testimonial.quote}"
+                  &quot;{testimonial.quote}&quot;
                 </p>
                 
                 <div className="flex justify-between items-end gap-4 mt-2">
                   <div className="flex flex-col gap-1.5">
-                    <span className="text-[26px] font-serif text-white leading-none">
+                    <span className="text-[24px] md:text-[26px] font-serif text-white leading-none">
                       {testimonial.name}
                     </span>
                     <span className="text-[13px] text-white/70 font-medium">

@@ -2,9 +2,17 @@
 
 import Link from "next/link";
 
+const menuLinks = [
+  { label: "Home", href: "/" },
+  { label: "Services", href: "/services" },
+  { label: "About Us", href: "/about" },
+  { label: "Case Studies", href: "/case-studies" },
+  { label: "FAQs", href: "/faqs" },
+];
+
 export default function Footer() {
   return (
-    <footer className="w-full bg-brand-navy-muted pt-10 pb-12 px-6 pt-20 text-white">
+    <footer className="w-full bg-brand-navy-muted px-6 pt-20 pb-12 text-white">
       <div className="max-w-[1200px] mx-auto flex flex-col gap-12">
         
         {/* Top Grid */}
@@ -33,10 +41,10 @@ export default function Footer() {
           <div className="flex flex-col gap-8">
             <h4 className="font-serif text-[32px] leading-none">Menu</h4>
             <ul className="flex flex-col gap-4">
-              {["Home", "Services", "About Us", "Case Studies", "FAQs"].map(link => (
-                <li key={link}>
-                  <Link href="#" className="text-[15px] font-medium text-white/90 hover:text-white transition-colors">
-                    {link}
+              {menuLinks.map(link => (
+                <li key={link.label}>
+                  <Link href={link.href} className="text-[15px] font-medium text-white/90 hover:text-white transition-colors">
+                    {link.label}
                   </Link>
                 </li>
               ))}
@@ -62,7 +70,7 @@ export default function Footer() {
             <h4 className="font-serif text-[32px] leading-none">Contact</h4>
             <ul className="flex flex-col gap-4">
               <li className="text-[15px] font-medium text-white/90 hover:text-white transition-colors cursor-pointer">+1 (555) 987-6543</li>
-              <li className="text-[15px] font-medium text-white/90 hover:text-white transition-colors cursor-pointer">contact@stratwellconsulting.com</li>
+              <li className="break-words text-[15px] font-medium text-white/90 hover:text-white transition-colors cursor-pointer">contact@stratwellconsulting.com</li>
               <li className="text-[15px] font-medium text-white/90 leading-relaxed mt-2">
                 420 Stratwell Avenue, Suite 300,<br />
                 Boston, MA 02116, USA
@@ -77,7 +85,7 @@ export default function Footer() {
           <p className="text-[13px] font-medium text-white/90">
             © {new Date().getFullYear()} Stratwell Consulting Framer Template
           </p>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 text-center md:text-left">
             <span className="text-[13px] font-medium text-white/90">Privacy Policy | T&C | Built in Framer | Created by You</span>
           </div>
         </div>

@@ -15,7 +15,7 @@ export default function LabelPill({ text, className }: LabelPillProps) {
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
-      <div className={` ${className} inline-flex justify-center items-center text-[14px]  h-[33px] gap-1 px-2 py-2 rounded-full border border-brand-navy-dark/15 `}>
+      <div className={`${className ?? ""} inline-flex justify-center items-center text-[14px] h-[33px] gap-1 px-2 py-2 rounded-full border border-brand-navy-dark/15`}>
         <div className="w-[12px] h-[12px] rounded-full bg-brand-blue"></div>
         <span className="font-medium text-[14px] tracking-wide text-brand-navy-dark uppercase">
           {text}

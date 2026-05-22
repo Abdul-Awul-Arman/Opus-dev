@@ -52,12 +52,12 @@ function ApproachCard({
   return (
     <div
       ref={ref}
-      className="sticky mb-8 last:mb-0 w-full flex justify-center"
+      className="relative mb-6 last:mb-0 w-full flex justify-center lg:sticky lg:mb-8"
       style={{ top: `${48 + index * 40}px` }}
     >
       <motion.div
         style={{ width }}
-        className="bg-white rounded-[32px] p-8 md:p-10 border border-white/40"
+        className="bg-white rounded-[28px] lg:rounded-[32px] p-7 md:p-10 border border-white/40"
       >
         <div className="flex justify-between items-start mb-6">
           <div className="w-12 h-12 flex items-center justify-center text-brand-blue">
@@ -101,7 +101,7 @@ export default function OurApproach() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
-            className="text-[64px] w-full leading-[1.15] tracking-[-0.01em] font-serif text-brand-navy-dark"
+            className="text-[42px] md:text-[56px] lg:text-[64px] w-full leading-[1.15] tracking-[-0.01em] font-serif text-brand-navy-dark"
           >
             At Stratwell Consulting, we believe that <span className="italic text-brand-blue">strategy</span> should do more than <span className="italic text-brand-navy-muted">sit on paper</span> — it should drive <span className="italic text-brand-blue">measurable</span> change.
           </motion.h2>
@@ -110,7 +110,7 @@ export default function OurApproach() {
         {/* Content Split */}
         <div className="flex flex-col lg:flex-row gap-6 items-start">
           {/* Left: Sticky Image */}
-          <div className="w-full lg:w-[45%] sticky top-12">
+          <div className="w-full lg:w-[45%] lg:sticky lg:top-12">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
