@@ -6,7 +6,7 @@ export const siteConfig = {
   description:
     "A full-service marketing agency for brand strategy, advertising, digital marketing, events, exhibitions, and production.",
   logo: "/logo.svg",
-  ogImage: "/images/og/home-og.png",
+  ogImage: "/images/og/home-og.jpg",
   address: {
     streetAddress: "596/C Khilgaon, Road 2",
     addressLocality: "Dhaka",
@@ -36,6 +36,8 @@ export function createPageMetadata({
   image?: string;
 }): Metadata {
   const url = absoluteUrl(path);
+  const imageUrl = absoluteUrl(image);
+  const imageType = image.endsWith(".jpg") || image.endsWith(".jpeg") ? "image/jpeg" : "image/png";
   const socialTitle = title.includes(siteConfig.name)
     ? title
     : `${title} | ${siteConfig.name}`;
@@ -56,7 +58,9 @@ export function createPageMetadata({
       locale: "en_US",
       images: [
         {
-          url: absoluteUrl(image),
+          url: imageUrl,
+          secureUrl: imageUrl,
+          type: imageType,
           width: 1200,
           height: 630,
           alt: "Opus Communications full-service marketing agency",
@@ -67,7 +71,16 @@ export function createPageMetadata({
       card: "summary_large_image",
       title: socialTitle,
       description,
-      images: [absoluteUrl(image)],
+      images: [
+        {
+          url: imageUrl,
+          secureUrl: imageUrl,
+          type: imageType,
+          width: 1200,
+          height: 630,
+          alt: "Opus Communications full-service marketing agency",
+        },
+      ],
     },
   };
 }

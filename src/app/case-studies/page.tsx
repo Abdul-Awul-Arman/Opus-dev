@@ -16,7 +16,7 @@ export const metadata: Metadata = createPageMetadata({
   title: "Case Studies & Portfolio",
   description,
   path: "/case-studies",
-  image: "/images/og/case-studies-og.png",
+  image: "/images/og/case-studies-og.jpg",
   keywords: [
     "Opus Communications portfolio",
     "branding case study Bangladesh",
