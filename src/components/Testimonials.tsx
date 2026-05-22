@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Play } from "lucide-react";
+import LabelPill from "./LabelPill";
 
 const testimonials = [
   {
@@ -48,12 +49,7 @@ export default function Testimonials() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-brand-navy-dark/15">
-            <div className="w-[8px] h-[8px] rounded-full bg-brand-blue"></div>
-            <span className="text-[12px] font-medium tracking-wide text-brand-navy-dark uppercase">
-              Testimonials
-            </span>
-          </div>
+         <LabelPill text="Testimonials" />
         </motion.div>
 
         <motion.h2 
@@ -61,23 +57,31 @@ export default function Testimonials() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
-          className="text-[48px] md:text-[64px] lg:text-[72px] leading-[1.1] tracking-[-0.01em] font-serif text-brand-navy-dark"
+          className="text-[48px] md:text-[64px]  leading-[1.1] tracking-[-0.01em] font-serif text-brand-navy-dark"
         >
           What <span className="italic">Our Clients Say</span>
         </motion.h2>
       </div>
 
       {/* Carousel Container */}
-      <div className="w-full px-6 lg:px-12">
-        <div className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-12 pt-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-          {testimonials.map((testimonial, index) => (
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
+      <div className="w-full relative mt-8">
+        <style>{`
+          @keyframes customMarquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+          }
+          .animate-custom-marquee {
+            animation: customMarquee 40s linear infinite;
+          }
+          .animate-custom-marquee:hover {
+            animation-play-state: paused;
+          }
+        `}</style>
+        <div className="flex w-max animate-custom-marquee gap-6 px-6">
+          {[...testimonials, ...testimonials].map((testimonial, index) => (
+            <div
               key={index}
-              className="relative shrink-0 w-[320px] md:w-[360px] lg:w-[400px] h-[500px] md:h-[540px] rounded-[28px] overflow-hidden snap-center group shadow-sm"
+              className="relative shrink-0 w-[320px] md:w-[360px] lg:w-[400px] h-[500px] md:h-[540px] rounded-[28px] overflow-hidden group shadow-sm"
             >
               {/* Background Placeholder */}
               <div className="absolute inset-0 bg-gradient-to-br from-[#bccae0] to-[#8fa7c9] transition-transform duration-700 group-hover:scale-105" />
@@ -106,7 +110,7 @@ export default function Testimonials() {
                   </button>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

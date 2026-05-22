@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import AnimatedButton from "./AnimatedButton";
 import { ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -36,7 +37,7 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-          className="absolute top-6 left-1/2 -translate-x-1/2 w-[1152px]  h-[80px] z-50 flex items-center justify-between p-[16px] rounded-[16px] border border-white/15 bg-white/12 backdrop-blur-[16px] "
+          className="absolute top-6 left-1/2 -translate-x-1/2 w-[1152px]  h-[80px] z-50 flex items-center justify-between p-[16px] rounded-[16px] border border-white/15 bg-white/12  backdrop-blur-[16px] "
         >
           <div className="flex items-center gap-4">
             <div className="relative w-26 h-24 flex items-center justify-center">
@@ -109,17 +110,7 @@ const Hero = () => {
               We help businesses unlock opportunities, scale faster, and achieve measurable results through data-driven strategies.
             </motion.p>
 
-            <motion.button
-              initial={{ y: 40, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 1, delay: 1.4, ease: "easeOut" }}
-              className="group flex justify-center  pl-3 w-[239px] h-[56px] flex items-center gap-3 bg-[#ebf1f8] text-[16px] rounded-full text-brand-navy-dark font-bold hover:bg-white transition-all transform hover:scale-105"
-            >
-              Book a Consultation
-              <div className="w-10 h-10 bg-brand-navy-dark rounded-full flex items-center justify-center text-white transition-transform group-hover:rotate-45 ml-2">
-                <ArrowUpRight size={20} />
-              </div>
-            </motion.button>
+            <AnimatedButton />
           </div>
         </div>
       </motion.div>

@@ -1,58 +1,55 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight, TrendingUp, Settings, Network, Calculator } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+import LabelPill from "./LabelPill";
+import AnimatedButton from "./AnimatedButton";
 
 const services = [
   {
     title: "Business Strategy",
-    description: "Set the right direction with market insights and actionable roadmaps.",
-    icon: TrendingUp,
+    description: "Aligning your vision with actionable plans to capture new markets.",
+    icon: "/services/Business Strategy.svg",
   },
   {
     title: "Operations Optimization",
-    description: "Streamline workflows, cut costs, and boost efficiency.",
-    icon: Settings,
+    description: "Streamlining processes to maximize efficiency and reduce costs.",
+    icon: "/services/Operations Optimization.svg",
   },
   {
     title: "Digital Transformation",
-    description: "Set the right direction with market insights and actionable roadmaps.",
-    icon: Network,
+    description: "Integrating modern technology to elevate your business capabilities.",
+    icon: "/services/Digital Transformation.svg",
   },
   {
     title: "Financial Advisory",
-    description: "Improve performance, reduce risk, and unlock growth capital.",
-    icon: Calculator,
-  },
+    description: "Expert insights for capital allocation, risk management, and growth.",
+    icon: "/services/Financial Advisory.svg",
+  }
 ];
 
 export default function Services() {
   return (
     <section className="w-full px-6 lg:px-12 py-20 lg:py-28">
       <div className="max-w-[1200px] mx-auto flex flex-col gap-12 lg:gap-16">
-        
+
         {/* Header */}
         <div className="flex flex-col gap-6">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-brand-navy-dark/15">
-              <div className="w-[8px] h-[8px] rounded-full bg-brand-blue"></div>
-              <span className="text-[12px] font-medium tracking-wide text-brand-navy-dark uppercase">
-                Our Services
-              </span>
-            </div>
+            <LabelPill text="Our Services" />
           </motion.div>
 
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
-            className="text-[48px] md:text-[64px] lg:text-[72px] leading-[1.1] tracking-[-0.01em] font-serif text-brand-navy-dark"
+            className="text-[64px] leading-[1.1] tracking-[-0.01em] font-serif text-brand-navy-dark"
           >
             Our <span className="italic">Expertise</span>
           </motion.h2>
@@ -60,11 +57,10 @@ export default function Services() {
 
         {/* Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          
+
           {/* Left Side - 4 Cards */}
           <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
             {services.map((service, index) => {
-              const Icon = service.icon;
               return (
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
@@ -72,16 +68,21 @@ export default function Services() {
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
                   key={index}
-                  className="bg-white rounded-[24px] p-8 md:p-10 flex flex-col gap-8 shadow-sm"
+                  className="group bg-white rounded-[24px] p-[24px] flex flex-col gap-8 cursor-pointer transition-transform duration-300 hover:scale-[0.97]"
                 >
-                  <div className="text-brand-blue">
-                    <Icon strokeWidth={1.25} size={48} />
+                  <div className="flex justify-between items-start">
+                    <div className="text-brand-blue">
+                      <img src={service.icon} alt={service.title} className="w-14 h-14" />
+                    </div>
+                    <div className="w-10 h-10 bg-brand-blue rounded-full flex items-center justify-center text-white opacity-0 scale-90 transition-all duration-300 group-hover:opacity-100 group-hover:scale-100">
+                      <ArrowUpRight size={20} />
+                    </div>
                   </div>
                   <div className="flex flex-col gap-4">
-                    <h3 className="text-[28px] md:text-[32px] font-serif font-normal leading-tight text-brand-navy-dark">
+                    <h3 className="text-[32px] font-serif font-normal leading-tight text-brand-navy-dark">
                       {service.title}
                     </h3>
-                    <p className="text-[16px] leading-relaxed text-brand-navy-dark/70 font-medium pr-4">
+                    <p className="text-[16px] leading-[1.6] text-text-one font-sans font-normal pr-4">
                       {service.description}
                     </p>
                   </div>
@@ -98,26 +99,26 @@ export default function Services() {
             transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
             className="lg:col-span-1 relative rounded-[24px] overflow-hidden min-h-[500px] flex flex-col justify-end group shadow-sm"
           >
-            {/* Background Placeholder */}
-            <div className="absolute inset-0 bg-gradient-to-br from-[#c9d4e5] to-[#a3b7d6] transition-transform duration-700 group-hover:scale-105" />
-            
+            {/* Background Image */}
+            <img
+              src="/images/services-bg.avif"
+              alt="Start Your Growth Journey"
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+
             {/* Overlay Gradient (just to ensure readability) */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
-            
+            <div className="absolute inset-0 bg-gradient-to-b from-[#080e29]/0 to-[#080e29]/70" />
+
             {/* Bottom Glass Card */}
             <div className="relative z-10 p-4">
-               <div className="w-full rounded-[20px] bg-[#3a3b40]/60 backdrop-blur-md border border-white/10 p-8 flex flex-col gap-8 shadow-2xl">
-                 <h3 className="text-[36px] font-serif font-normal leading-[1.05] text-white">
-                   Start Your <span className="italic">Growth</span> Journey
-                 </h3>
-                 
-                 <button className="flex items-center gap-4 bg-surface-main text-[16px] rounded-full text-brand-navy-dark font-bold hover:bg-white transition-all transform hover:scale-105 h-[56px] pl-6 pr-2 w-max group/btn">
-                   Get in Touch
-                   <div className="w-10 h-10 bg-brand-navy-dark rounded-full flex items-center justify-center text-white transition-transform group-hover/btn:rotate-45">
-                     <ArrowUpRight size={20} />
-                   </div>
-                 </button>
-               </div>
+
+              <div className="w-full rounded-[20px] bg-[#5c616f]/80 backdrop-blur-[16px] border border-white/10 p-[16px] flex flex-col gap-8 shadow-2xl">
+                <h3 className="text-[32px] font-serif font-normal leading-[1.05] text-white">
+                  Start Your <span className="italic">Growth</span> Journey
+                </h3>
+
+                <AnimatedButton text="Get in Touch" className="h-[56px] max-w-[189px] p-[8px] pl-[20px]" />
+              </div>
             </div>
           </motion.div>
 

@@ -4,8 +4,8 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#0b1021] pt-20 pb-12 px-6 lg:px-12 text-white">
-      <div className="max-w-[1200px] mx-auto flex flex-col gap-20">
+    <footer className="w-full bg-brand-navy-muted pt-10 pb-12 px-6 pt-20 text-white">
+      <div className="max-w-[1200px] mx-auto flex flex-col gap-12">
         
         {/* Top Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">
@@ -73,7 +73,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-4">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-1">
           <p className="text-[13px] font-medium text-white/90">
             © {new Date().getFullYear()} Stratwell Consulting Framer Template
           </p>

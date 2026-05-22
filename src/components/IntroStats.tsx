@@ -33,38 +33,69 @@ export default function IntroStats() {
 
           {/* Heading */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
+            variants={{
+              hidden: {},
+              visible: {
+                transition: { staggerChildren: 0.05, delayChildren: 0.1 }
+              }
+            }}
             className="max-w-[1150px]"
           >
             <h2 className="leading-[1.1] tracking-[-0.01em] font-serif text-brand-navy-dark">
-              Stratwell Consulting is a <span className="italic text-brand-blue">results-driven</span> business consultancy <span className="italic text-brand-blue">helping</span> leaders <span className="italic text-brand-blue">navigate</span> complexity, <span className="italic text-brand-blue">refine</span> strategy, and <span className="italic text-brand-blue">achieve</span> sustainable growth.
+              {"Stratwell Consulting is a *results-driven* business consultancy *helping* leaders *navigate* complexity, *refine* strategy, and *achieve* sustainable growth."
+                .split(" ")
+                .map((word, i, arr) => {
+                  const hasItalicStyle = word.includes("*");
+                  const cleanWord = word.replace(/\*/g, "");
+                  return (
+                    <span key={i}>
+                      <motion.span
+                        variants={{
+                          hidden: { opacity: 0, y: 30 },
+                          visible: {
+                            opacity: 1,
+                            y: 0,
+                            transition: { duration: 0.8, ease: "easeOut" },
+                          },
+                        }}
+                        className={`inline-block ${hasItalicStyle ? "italic text-brand-blue" : ""
+                          }`}
+                      >
+                        {cleanWord}
+                      </motion.span>
+                      {i !== arr.length - 1 && " "}
+                    </span>
+                  );
+                })}
             </h2>
           </motion.div>
         </div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-4">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-4">
           {stats.map((stat, index) => (
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6, delay: 0.2 + index * 0.1, ease: "easeOut" }}
+            <div
               key={index}
               className="bg-white rounded-[28px] p-[24px] flex flex-col gap-6 shadow-[0_8px_30px_rgba(13,27,42,0.02)] border border-brand-navy-dark/[0.04]"
             >
               <h3 className="text-[64px] font-serif font-normal  text-brand-navy-dark ">
                 {stat.value}
               </h3>
-              <p className="text-[16px]  leading-[1.6] text-[#333333] font-sans font-normal">
+              <p className="text-[16px]  leading-[1.6] text-text-one font-sans font-normal">
                 {stat.description}
               </p>
-            </motion.div>
+            </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
