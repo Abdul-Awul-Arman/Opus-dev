@@ -49,13 +49,13 @@ const Hero = () => {
           >
             <h1 className="text-[44px] leading-[1.08] tracking-[-0.01em] sm:text-[52px] md:text-[52px] lg:text-[72px] xl:text-[80px] xl:leading-[100px]">
               <motion.div variants={{ hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut" } } }}>
-                Strategy That <br className="hidden xl:block" />
+                A Full-Service <br className="hidden xl:block" />
               </motion.div>
               <motion.div variants={{ hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut" } } }}>
-                Powers <span className="font-serif italic">Your Next</span> <br className="hidden xl:block" />
+                <span className="font-serif italic">Marketing Agency</span> <br className="hidden xl:block" />
               </motion.div>
               <motion.div variants={{ hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut" } } }}>
-                <span className="font-serif italic">Level</span> of <span className="font-serif">Growth</span>.
+                For <span className="font-serif italic">Brand Growth</span>.
               </motion.div>
             </h1>
           </motion.div>
@@ -67,7 +67,7 @@ const Hero = () => {
               transition={{ duration: 1, delay: 1.25, ease: "easeOut" }}
               className="text-white text-[18px] leading-[1.45]"
             >
-              We help businesses unlock opportunities, scale faster, and achieve measurable results through data-driven strategies.
+              Opus Communications helps brands move from idea to strategy, design, activation, production, and delivery through complete 360-degree creative communication.
             </motion.p>
 
             <AnimatedButton />

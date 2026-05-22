@@ -6,33 +6,33 @@ import LabelPill from "./LabelPill";
 
 const testimonials = [
   {
-    quote: "What impressed us most was how their strategies turned into results across the business.",
-    name: "John Linwood",
-    role: "VP, Manufacturing Firm",
+    quote: "Opus worked like an extension of our team, turning the brief into clear creative output and dependable delivery.",
+    name: "Brand Partner",
+    role: "Corporate Client",
     image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
   },
   {
-    quote: "Their expertise gave us the clarity to make smarter decisions and accelerate growth in record time.",
-    name: "Vika Nightshade",
-    role: "Founder, Retail Group",
+    quote: "The team understood the brand quickly and translated it into materials that felt consistent, polished, and ready for market.",
+    name: "Marketing Partner",
+    role: "Branding Client",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
   },
   {
-    quote: "Stratwell gave us clarity when we needed it most—and results that exceeded expectations.",
-    name: "Mike Scott",
-    role: "CEO, Tech",
+    quote: "From fabrication planning to on-site coordination, Opus kept the exhibition experience organized and on brand.",
+    name: "Exhibition Client",
+    role: "Stall Fabrication",
     image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
   },
   {
-    quote: "Working with them gave us back valuable time, reduced expenses, and simplified everything.",
-    name: "Anna White",
-    role: "COO, Retail Group",
+    quote: "Their production support helped turn raw footage into a clean, engaging story for our audience.",
+    name: "Production Client",
+    role: "OVC & Motion Graphics",
     image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
   },
   {
-    quote: "The strategic insights provided a completely new perspective on our market positioning.",
-    name: "David Chen",
-    role: "Director, Global Logistics",
+    quote: "Opus brought practical creative thinking, timely execution, and a strong sense of brand detail to the project.",
+    name: "Communication Partner",
+    role: "Integrated Campaign",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
   }
 ];
@@ -59,7 +59,7 @@ export default function Testimonials() {
           transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
           className="text-[42px] md:text-[64px] leading-[1.1] tracking-[-0.01em] font-serif text-brand-navy-dark"
         >
-          What <span className="italic">Our Clients Say</span>
+          What <span className="italic">Partners Say</span>
         </motion.h2>
       </div>
 

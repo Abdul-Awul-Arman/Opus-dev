@@ -2,32 +2,32 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Lightbulb, BarChart3, Rocket, LineChart } from "lucide-react";
+import { Lightbulb, Palette, Rocket, LineChart } from "lucide-react";
 import LabelPill from "./LabelPill";
 
 const approaches = [
   {
     id: "01",
-    title: "Understand",
-    description: "We immerse ourselves in your business to uncover challenges and opportunities.",
+    title: "Plan",
+    description: "We study the brand, market, audience, and ambition so every concept starts with a clear direction.",
     icon: Lightbulb,
   },
   {
     id: "02",
-    title: "Strategize",
-    description: "We design tailored strategies that align with your goals and available resources.",
-    icon: BarChart3,
+    title: "Create",
+    description: "Our creative team turns insights into design, copy, campaigns, content, and communication assets.",
+    icon: Palette,
   },
   {
     id: "03",
-    title: "Implement",
-    description: "We guide execution to ensure solutions are practical, effective, and sustainable.",
+    title: "Deliver",
+    description: "We prepare the work for real audience impact, from rollout materials to events, exhibitions, and production.",
     icon: Rocket,
   },
   {
     id: "04",
-    title: "Measure",
-    description: "We monitor performance, refine processes, and deliver clear, tangible results.",
+    title: "Measure / Support",
+    description: "We review the outcome, support the brand after launch, and keep communication moving forward.",
     icon: LineChart,
   },
 ];
@@ -103,7 +103,7 @@ export default function OurApproach() {
             transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
             className="text-[42px] md:text-[56px] lg:text-[64px] w-full leading-[1.15] tracking-[-0.01em] font-serif text-brand-navy-dark"
           >
-            At Stratwell Consulting, we believe that <span className="italic text-brand-blue">strategy</span> should do more than <span className="italic text-brand-navy-muted">sit on paper</span> — it should drive <span className="italic text-brand-blue">measurable</span> change.
+            Opus turns <span className="italic text-brand-blue">insight</span> into creative communication that works in the <span className="italic text-brand-navy-muted">audience&apos;s perspective</span> and brings brands to life.
           </motion.h2>
         </div>
 
@@ -120,7 +120,7 @@ export default function OurApproach() {
             >
               <img
                 src="/images/approach-img.jpg"
-                alt="Our Approach"
+                alt="Opus creative approach"
                 className="absolute inset-0 w-full h-full object-cover"
               />
             </motion.div>

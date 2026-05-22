@@ -12,7 +12,7 @@ interface AnimatedButtonProps {
 }
 
 export default function AnimatedButton({
-  text = "Book a Consultation",
+  text = "Start a Project",
   delay = 1.4,
   className = "",
   href,

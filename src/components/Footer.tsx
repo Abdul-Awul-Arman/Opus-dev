@@ -25,12 +25,12 @@ export default function Footer() {
                 <path d="M15 3H8L4 12H13L9 21H16L20 12H11L15 3Z" fill="white"/>
               </svg>
               <div className="flex flex-col">
-                <span className="font-sans font-semibold text-[24px] leading-none tracking-tight">Stratwell</span>
-                <span className="font-sans text-[11px] tracking-[0.15em] uppercase mt-1 text-white/80">Consulting</span>
+                <span className="font-sans font-semibold text-[24px] leading-none tracking-tight">Opus</span>
+                <span className="font-sans text-[11px] tracking-[0.15em] uppercase mt-1 text-white/80">Communications</span>
               </div>
             </div>
             <p className="text-[15px] leading-[1.6] text-white/90 max-w-[340px] font-medium">
-              Stratwell Consulting helps businesses streamline operations, optimize performance, and achieve measurable growth.
+              Opus Communications is a full-service marketing agency creating brand strategy, design, campaigns, events, exhibitions, production, and digital communication.
             </p>
             <button className="bg-white text-brand-navy-dark text-[15px] font-bold py-3.5 px-8 rounded-full w-max hover:bg-white/90 transition-colors mt-2">
               Contact Us
@@ -69,11 +69,14 @@ export default function Footer() {
           <div className="flex flex-col gap-8">
             <h4 className="font-serif text-[32px] leading-none">Contact</h4>
             <ul className="flex flex-col gap-4">
-              <li className="text-[15px] font-medium text-white/90 hover:text-white transition-colors cursor-pointer">+1 (555) 987-6543</li>
-              <li className="break-words text-[15px] font-medium text-white/90 hover:text-white transition-colors cursor-pointer">contact@stratwellconsulting.com</li>
+              <li className="text-[15px] font-medium text-white/90 hover:text-white transition-colors cursor-pointer">+880 1711 387708</li>
+              <li className="text-[15px] font-medium text-white/90 hover:text-white transition-colors cursor-pointer">+880 1911 484826</li>
+              <li className="break-words text-[15px] font-medium text-white/90 hover:text-white transition-colors cursor-pointer">info@opusbd.com</li>
+              <li className="break-words text-[15px] font-medium text-white/90 hover:text-white transition-colors cursor-pointer">opusbd1@gmail.com</li>
+              <li className="break-words text-[15px] font-medium text-white/90 hover:text-white transition-colors cursor-pointer">www.opusbd.com</li>
               <li className="text-[15px] font-medium text-white/90 leading-relaxed mt-2">
-                420 Stratwell Avenue, Suite 300,<br />
-                Boston, MA 02116, USA
+                596/C Khilgaon, Road 2,<br />
+                Dhaka 1219
               </li>
             </ul>
           </div>
@@ -83,10 +86,10 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-1">
           <p className="text-[13px] font-medium text-white/90">
-            © {new Date().getFullYear()} Stratwell Consulting Framer Template
+            &copy; {new Date().getFullYear()} Opus Communications
           </p>
           <div className="flex items-center gap-2 text-center md:text-left">
-            <span className="text-[13px] font-medium text-white/90">Privacy Policy | T&C | Built in Framer | Created by You</span>
+            <span className="text-[13px] font-medium text-white/90">Privacy Policy | T&amp;C</span>
           </div>
         </div>
 

@@ -5,54 +5,54 @@ import { Plus } from "lucide-react";
 
 const faqs = [
   {
-    question: "What types of businesses do you work with?",
+    question: "What does Opus Communications do?",
     answer:
-      "We work with startups, growing companies, and established organizations that need sharper strategy, stronger operations, or support through a major growth phase.",
+      "Opus Communications is a full-service marketing agency providing brand strategy, creative advertising, digital marketing, activation, events, exhibitions, design, branding, production, and content creation.",
   },
   {
-    question: "How do you approach a new project?",
+    question: "What types of clients do you work with?",
     answer:
-      "Every engagement starts with discovery. We learn the business, identify the highest-impact opportunities, then build a practical roadmap with clear ownership and measurable milestones.",
+      "We work with organizations that need professional brand communication, including corporate, financial, industrial, government, consumer, event, and exhibition-focused clients.",
   },
   {
-    question: "What results can we expect?",
+    question: "Do you handle complete 360-degree campaigns?",
     answer:
-      "Results depend on the scope, but our work is built around measurable improvements such as revenue growth, cost reduction, stronger processes, better reporting, and clearer decision-making.",
+      "Yes. Opus supports complete campaigns from planning and creative concept to design, production, activation, rollout, and final delivery.",
   },
   {
-    question: "How long does a typical engagement last?",
+    question: "Can you manage events and exhibitions?",
     answer:
-      "Focused strategy projects can take a few weeks, while implementation and transformation work often runs for several months. We shape the timeline around the problem and your team capacity.",
+      "Yes. Through event and exhibition capabilities, including Bortul for experiences, we support events, stall fabrication, decoration, activation, and on-site coordination.",
   },
   {
-    question: "Do you offer ongoing support after a project ends?",
+    question: "Do you provide branding and design services?",
     answer:
-      "Yes. We can stay involved through advisory check-ins, performance reviews, implementation support, or embedded support for teams that need continued momentum.",
+      "Yes. We create brand strategy, logos, visual identity, marketing materials, brand guidelines, product design, packaging support, and other design assets.",
   },
   {
-    question: "How much do your services cost?",
+    question: "Do you handle digital and social media marketing?",
     answer:
-      "Pricing depends on scope, complexity, and the level of support required. After an initial consultation, we provide a clear proposal with deliverables, timeline, and investment.",
+      "Yes. Opus provides digital and social media marketing support, including content planning, creative assets, and digital communication for brand visibility.",
   },
   {
-    question: "How can we get started?",
+    question: "Do you produce videos, OVCs, and motion graphics?",
     answer:
-      "Start with a consultation. We will discuss your current challenges, goals, timing, and whether our approach is the right fit for what you need.",
+      "Yes. Our production work includes OVC editing, final production, graphics, motion graphics, and info video content based on the project requirements.",
   },
   {
-    question: "Do you work with international clients?",
+    question: "How does a new project start?",
     answer:
-      "Yes. We support clients across locations and can structure collaboration around remote workshops, async reviews, and timezone-friendly operating rhythms.",
+      "A project starts with understanding your business, audience, market, and goal. From there, we plan the creative direction, create the assets, and prepare the work for delivery.",
   },
   {
-    question: "What industries do you specialize in?",
+    question: "Can you support long-term brand communication?",
     answer:
-      "Our work spans SaaS, retail, manufacturing, financial services, construction, and service businesses, with a focus on strategy, operations, finance, and digital transformation.",
+      "Yes. Opus can support brands beyond a single project through ongoing marketing communication, creative production, digital content, events, and campaign work.",
   },
   {
-    question: "How is Stratwell different from other consulting firms?",
+    question: "How can we contact Opus?",
     answer:
-      "We combine strategic clarity with hands-on implementation. The goal is not a slide deck that sits on a shelf, but a practical path your team can execute with confidence.",
+      "You can contact Opus Communications at info@opusbd.com or opusbd1@gmail.com, or call +880 1711 387708 and +880 1911 484826.",
   },
 ];
 

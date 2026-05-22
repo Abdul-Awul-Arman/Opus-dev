@@ -12,59 +12,59 @@ import AnimatedButton from "@/components/AnimatedButton";
 
 const services = [
   {
-    title: "Business Strategy",
+    title: "Brand Strategy & Design",
     icon: "/services/Business Strategy.svg",
     image: "https://images.unsplash.com/photo-1573497491208-6b1acb260507?auto=format&fit=crop&w=1200&q=85",
     why:
-      "A well-crafted business strategy provides clarity, reduces uncertainty, and positions your organization to seize opportunities in a competitive landscape.",
+      "A clear brand system gives every communication a stronger foundation, from first impression to long-term recognition.",
     included: [
-      "Market Research & Competitive Analysis",
-      "Business Planning & Goal Setting",
-      "Strategic Roadmap Development",
-      "Risk Assessment & Mitigation",
-      "Performance Tracking & KPIs",
+      "Brand Strategy & Consultancy",
+      "Logo Design & Visual Identity",
+      "Brand Guidelines & Marketing Materials",
+      "Product Design & Packaging Support",
+      "Brand Story & Communication Direction",
     ],
   },
   {
-    title: "Operations Optimization",
+    title: "Creative Advertising & Content Production",
     icon: "/services/Operations Optimization.svg",
     image: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=85",
     why:
-      "Optimized operations reduce costs, improve productivity, and help your organization operate efficiently while responding faster to market changes.",
+      "Strong creative work turns brand messages into memorable campaigns, polished content, and audience-ready stories.",
     included: [
-      "Process Mapping & Workflow Analysis",
-      "Operational Efficiency Audits",
-      "Resource Allocation & Capacity Planning",
-      "Automation & Technology Integration",
-      "Continuous Improvement Strategies",
+      "Creative & Advertising Solutions",
+      "Campaign Concept Development",
+      "Production & Content Creation",
+      "OVC Editing & Final Production",
+      "Graphics & Motion Graphics",
     ],
   },
   {
-    title: "Digital Transformation",
+    title: "Digital & Social Media Marketing",
     icon: "/services/Digital Transformation.svg",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=85",
     why:
-      "Digital transformation helps businesses unlock agility, improve customer experiences, and build scalable systems for long-term growth.",
+      "Digital channels keep brands visible, active, and connected with audiences across everyday communication moments.",
     included: [
-      "Technology Assessment & Strategy",
-      "System Integration & Cloud Solutions",
-      "Digital Tools & Automation Implementation",
-      "Data Management & Analytics",
-      "Change Management & Training Support",
+      "Digital Marketing Planning",
+      "Social Media Marketing",
+      "Website & Digital Communication Support",
+      "Content Planning & Creative Assets",
+      "Campaign Rollout Support",
     ],
   },
   {
-    title: "Financial Advisory",
+    title: "Activation, Events & Exhibitions",
     icon: "/services/Financial Advisory.svg",
     image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=85",
     why:
-      "Effective financial management gives leaders the insight needed to make confident decisions, optimize resources, and sustain growth.",
+      "Live experiences make brands tangible, turning exhibitions, activations, and events into memorable extensions of the brand story.",
     included: [
-      "Financial Planning & Forecasting",
-      "Budgeting & Cost Optimization",
-      "Investment Analysis & Risk Management",
-      "Cash Flow & Capital Management",
-      "Financial Reporting & Performance Metrics",
+      "Activation & BTL Marketing",
+      "Event Management Through Bortul",
+      "Stall Fabrication & Decoration",
+      "Exhibition Display Planning",
+      "Promotional Item Production & Supply",
     ],
   },
 ];
@@ -76,13 +76,13 @@ export default function ServicesPageClient() {
         <div className="dark-contrast relative flex h-[374px] w-full items-center justify-center overflow-hidden bg-brand-navy-dark md:h-[540px] lg:h-[680px] xl:h-[calc(100vh-2rem)] xl:rounded-[1.5rem]">
           <img
             src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1800&q=85"
-            alt="Consultants planning services"
+            alt="Opus Communications creative services"
             className="absolute inset-0 h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-[#080e29]/55" />
           <SiteHeader />
           <h1 className="relative z-10 px-6 pt-[76px] text-center font-serif text-[52px] leading-none tracking-[-0.01em] text-white md:text-[72px] lg:text-[80px]">
-            Our Expertise
+            Our Services
           </h1>
         </div>
       </section>
@@ -92,7 +92,7 @@ export default function ServicesPageClient() {
           <div className="mx-auto flex max-w-[780px] flex-col items-center gap-6 text-center">
             <LabelPill text="Our Services" />
             <h2 className="font-serif text-[44px] leading-[1.08] tracking-[-0.01em] text-brand-navy-dark md:text-[56px] lg:text-[64px]">
-              Solutions We Provide
+              360-Degree Creative Services
             </h2>
           </div>
 
@@ -119,7 +119,7 @@ export default function ServicesPageClient() {
                     </h3>
                     <AnimatedButton
                       className="mt-6 w-[290px] text-[16px] font-semibold"
-                      text="Book a Free Consultation"
+                      text="Start a Project"
                       href="/#contact"
                     />
                   </div>
@@ -169,7 +169,7 @@ export default function ServicesPageClient() {
       <CaseStudies
         label="Our Works"
         title="Our Success Stories"
-        description="Discover how we have helped businesses and organizations achieve remarkable results."
+        description="Explore selected branding, exhibition, production, and communication work from Opus."
       />
       <Divider />
       <TrustedBy />

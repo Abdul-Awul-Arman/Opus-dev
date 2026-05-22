@@ -40,6 +40,15 @@ export default function TrustedBy() {
           >
             Trusted By
           </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.7, delay: 0.18, ease: "easeOut" }}
+            className="max-w-[620px] text-[17px] leading-[1.7] text-text-one"
+          >
+            These are some of the many clients that have trusted us with their brands.
+          </motion.p>
         </div>
 
         {/* Logos Grid */}

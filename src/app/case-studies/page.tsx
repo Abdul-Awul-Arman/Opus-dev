@@ -8,8 +8,8 @@ import Footer from "@/components/Footer";
 import Divider from "@/components/Divider";
 
 export const metadata: Metadata = {
-  title: "Case Studies - Opus",
-  description: "Explore consulting success stories and client results from Opus.",
+  title: "Case Studies - Opus Communications",
+  description: "Explore Opus portfolio work across branding, events, exhibitions, video production, and motion graphics.",
 };
 
 export default function CaseStudiesPage() {
@@ -19,7 +19,7 @@ export default function CaseStudiesPage() {
         <div className="dark-contrast relative flex h-[374px] w-full items-center justify-center overflow-hidden bg-brand-navy-dark md:h-[540px] lg:h-[680px] xl:h-[calc(100vh-2rem)] xl:rounded-[1.5rem]">
           <img
             src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1800&q=85"
-            alt="Consultants reviewing business results"
+            alt="Opus portfolio project review"
             className="absolute inset-0 h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-[#080e29]/55" />
@@ -33,7 +33,7 @@ export default function CaseStudiesPage() {
       <CaseStudies
         label="Our Works"
         title="Our Success Stories"
-        description="Discover how we have helped businesses and organizations achieve remarkable results."
+        description="Discover selected brand, exhibition, production, and communication projects from Opus."
         showViewMore={false}
       />
 

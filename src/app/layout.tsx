@@ -16,8 +16,8 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Opus - Premium Experience",
-  description: "Next-generation web application with premium design.",
+  title: "Opus Communications",
+  description: "A full-service marketing agency for brand strategy, advertising, digital marketing, events, exhibitions, and production.",
 };
 
 export default function RootLayout({

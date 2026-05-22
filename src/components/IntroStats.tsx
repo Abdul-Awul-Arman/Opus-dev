@@ -5,20 +5,20 @@ import LabelPill from "./LabelPill";
 
 const stats = [
   {
-    value: "92%",
-    description: "Of clients report measurable performance improvements within year.",
+    value: "14+",
+    description: "Years of creative, strategic, and marketing communication experience.",
   },
   {
-    value: "$50M",
-    description: "In revenue growth generated across client portfolios in the last 3 years.",
+    value: "360",
+    description: "Degree creative services from brand strategy to launch, activation, and production.",
   },
   {
-    value: "100+",
-    description: "Businesses advised across industries from tech startups to established enterprises.",
+    value: "7",
+    description: "Core service areas across branding, digital, events, exhibitions, and content creation.",
   },
   {
-    value: "15+",
-    description: "Years of combined expertise guiding business strategy and execution.",
+    value: "Multi",
+    description: "Sector experience with corporate, financial, industrial, government, and consumer brands.",
   },
 ];
 
@@ -45,7 +45,7 @@ export default function IntroStats() {
             className="max-w-[1150px]"
           >
             <h2 className="text-[44px] leading-[1.08] tracking-[-0.01em] font-serif text-brand-navy-dark md:text-[56px] xl:text-display-2 xl:leading-[1.1]">
-              {"Stratwell Consulting is a *results-driven* business consultancy *helping* leaders *navigate* complexity, *refine* strategy, and *achieve* sustainable growth."
+              {"Opus Communications began its journey on July 1, 2012, building *brand stories*, *creative assets*, and *marketing communication* that help organizations connect with their audiences."
                 .split(" ")
                 .map((word, i, arr) => {
                   const hasItalicStyle = word.includes("*");

@@ -7,8 +7,8 @@ import FAQList from "@/components/FAQList";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "FAQs - Opus",
-  description: "Answers to common questions about working with Opus.",
+  title: "FAQs - Opus Communications",
+  description: "Answers to common questions about Opus Communications services, projects, and contact details.",
 };
 
 export default function FAQsPage() {
@@ -18,7 +18,7 @@ export default function FAQsPage() {
         <div className="dark-contrast relative flex h-[374px] w-full items-center justify-center overflow-hidden bg-brand-navy-dark md:h-[540px] lg:h-[680px] xl:h-[calc(100vh-2rem)] xl:rounded-[1.5rem]">
           <img
             src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1800&q=85"
-            alt="Consulting team discussion"
+            alt="Opus Communications team discussion"
             className="absolute inset-0 h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-[#080e29]/55" />
@@ -34,7 +34,7 @@ export default function FAQsPage() {
           <div className="flex max-w-[780px] flex-col items-center gap-6 text-center">
             <LabelPill text="FAQs" />
             <h2 className="font-serif text-[42px] leading-[1.1] tracking-[-0.01em] text-brand-navy-dark md:text-[56px] lg:text-[64px]">
-              Answers to Common Questions About Working with Us
+              Answers to Common Questions About Opus
             </h2>
           </div>
 
@@ -44,7 +44,7 @@ export default function FAQsPage() {
             href="/#contact"
             className="group flex h-[56px] w-[320px] max-w-full items-center justify-between gap-3 rounded-full bg-[#121b60] pl-6 pr-2 text-[16px] font-bold text-white whitespace-nowrap transition-colors duration-300 hover:bg-black md:w-max md:max-w-none"
           >
-            Book a Free Consultation
+            Start a Project
             <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white transition-transform duration-300 group-hover:rotate-45">
               <ArrowUpRight size={20} className="text-[#121b60]" />
             </span>

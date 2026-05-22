@@ -10,45 +10,45 @@ const caseStudies = [
   {
     id: 1,
     tags: [
-      { label: "Business Strategy", active: true },
-      { label: "SaaS Startup", active: false },
+      { label: "Branding", active: true },
+      { label: "Launch Support", active: false },
     ],
-    title: "Helped a SaaS startup grow revenue 65% in 12 months.",
+    title: "Built a cohesive brand launch for NLI Securities Limited.",
     description:
-      "We helped a fast-growing SaaS company refine its go-to-market strategy, resulting in a 65% revenue increase in just 12 months.",
+      "Opus supported NLI Securities from startup with brand strategy, visual identity, office interior design, indoor and outdoor branding, and launch event coordination.",
     img: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80",
   },
   {
     id: 3,
     tags: [
-      { label: "Operations Optimization", active: true },
-      { label: "Manufacturing", active: false },
+      { label: "Stall Fabrication", active: true },
+      { label: "Exhibition", active: false },
     ],
-    title: "Get 20% Cost Savings & Efficiency for Manufacturing company",
+    title: "Designed and executed Bridge Chemie's DTG 2024 exhibition stall.",
     description:
-      "Through a detailed operations audit, process redesign, and automation of key workflows, we reduced overhead by 20% while improving on-time delivery rates and overall efficiency.",
+      "For DTG at ICCB Dhaka, Opus delivered a custom stall with brand-led design, modular fabrication, interactive product display planning, and on-site coordination.",
     img: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1200&q=80",
   },
   {
     id: 4,
     tags: [
-      { label: "Digital Transformation", active: true },
-      { label: "Retail", active: false },
+      { label: "OVC Production", active: true },
+      { label: "Motion Graphics", active: false },
     ],
-    title: "Led a complete digital transformation for a retail chain.",
+    title: "Produced an event OVC for Omera LPG.",
     description:
-      "Migrated legacy systems and implemented an omnichannel experience that boosted online sales by 120%.",
+      "Opus handled editing, motion graphics, and final production from client-provided footage, turning event material into a polished brand story.",
     img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80",
   },
   {
     id: 5,
     tags: [
-      { label: "Financial Advisory", active: true },
-      { label: "Fintech", active: false },
+      { label: "Info Video Series", active: true },
+      { label: "Government Projects", active: false },
     ],
-    title: "Guided a fintech through Series B funding of $25M.",
+    title: "Created info videos for national development stories.",
     description:
-      "Provided financial modeling, investor deck strategy, and due diligence support resulting in a successful $25M raise.",
+      "Opus produced a series of info videos on major development initiatives, enriching collected footage with graphics and motion graphics.",
     img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80",
   },
 ];
@@ -139,7 +139,7 @@ export default function CaseStudies({
   label = "CASE STUDIES",
   title = (
     <>
-      Proven <span className="italic text-brand-blue">Results</span> Across Industries
+      Creative <span className="italic text-brand-blue">Work</span> Across Brands
     </>
   ),
   description,

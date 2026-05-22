@@ -8,63 +8,63 @@ import Footer from "@/components/Footer";
 import Divider from "@/components/Divider";
 
 export const metadata: Metadata = {
-  title: "About Us - Opus",
-  description: "Learn about the consulting team, mission, and values behind Opus.",
+  title: "About Us - Opus Communications",
+  description: "Learn about Opus Communications, a full-service marketing, advertising, branding, event, exhibition, digital, and production agency.",
 };
 
 const stats = [
   {
-    value: "92%",
-    description: "Of clients report measurable performance improvements within year.",
+    value: "14+",
+    description: "Years of marketing communication, creative strategy, and production experience.",
   },
   {
-    value: "$50M",
-    description: "In revenue growth generated across client portfolios in the last 3 years.",
+    value: "360",
+    description: "Degree agency support across brand, creative, digital, activation, event, and exhibition work.",
   },
   {
-    value: "100+",
-    description: "Businesses advised across industries from tech startups to established enterprises.",
+    value: "2012",
+    description: "The year Opus Communications began its journey with a skilled professional team.",
   },
   {
-    value: "15+",
-    description: "Years of combined expertise guiding business strategy and execution.",
+    value: "Full",
+    description: "Service capability from idea and design to production, rollout, and brand support.",
   },
 ];
 
 const team = [
   {
-    name: "Jane Smith",
-    role: "CEO & Founder",
+    name: "Strategy Team",
+    role: "Brand Strategy & Consultancy",
     image:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=80",
   },
   {
-    name: "David Lee",
-    role: "Head of Operations",
+    name: "Creative Team",
+    role: "Design, Advertising & Brand Communication",
     image:
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80",
   },
   {
-    name: "Maria Gonzalez",
-    role: "Creative Director",
+    name: "Production Team",
+    role: "Content, OVC, Motion Graphics & Final Output",
     image:
       "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=900&q=80",
   },
   {
-    name: "Alex Johnson",
-    role: "Marketing Lead",
+    name: "Event Team",
+    role: "Events, Activations & Brand Experiences",
     image:
       "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=900&q=80",
   },
   {
-    name: "Mary Jane",
-    role: "Product Manager",
+    name: "Digital Team",
+    role: "Digital & Social Media Marketing",
     image:
       "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=900&q=80",
   },
   {
-    name: "Ethan Brooks",
-    role: "Lead Developer",
+    name: "Exhibition Team",
+    role: "Stall Fabrication, Decoration & Display",
     image:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=900&q=80",
   },
@@ -96,7 +96,7 @@ export default function AboutPage() {
         <div className="dark-contrast relative flex h-[374px] w-full items-center justify-center overflow-hidden bg-brand-navy-dark md:h-[540px] lg:h-[680px] xl:h-[calc(100vh-2rem)] xl:rounded-[1.5rem]">
           <img
             src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1800&q=85"
-            alt="Consulting team workshop"
+            alt="Opus Communications team workshop"
             className="absolute inset-0 h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-[#080e29]/55" />
@@ -110,7 +110,7 @@ export default function AboutPage() {
       <section className="px-6 py-20 md:py-24 lg:px-12 lg:py-32">
         <div className="mx-auto grid max-w-[1420px] gap-10 lg:grid-cols-[0.68fr_1fr] lg:gap-20">
           <div className="flex flex-col gap-10">
-            <LabelPill text="Stratwell Consulting" />
+            <LabelPill text="Opus Communications" />
             <h2 className="font-serif text-[44px] leading-[1.08] tracking-[-0.01em] text-brand-navy-dark md:text-[56px] lg:text-[64px]">
               Who We Are
             </h2>
@@ -118,13 +118,13 @@ export default function AboutPage() {
 
           <div className="flex max-w-[850px] flex-col gap-7 text-[18px] leading-[1.5] text-text-one md:text-[22px] md:leading-[1.42]">
             <p>
-              We are a dedicated team of experienced consultants, strategists, and problem-solvers who bring both insight and practical execution to every challenge. Our collective expertise spans strategy, operations, finance, and digital transformation, equipping us with the depth and versatility to tackle complex problems from multiple perspectives.
+              Opus is a Latin word meaning an artistic work, especially one on a large scale. Opus Communications carries that idea into every brand, campaign, event, exhibition, and production assignment we create.
             </p>
             <p>
-              What truly sets us apart is our collaborative mindset. We don&apos;t just provide recommendations from the sidelines — we immerse ourselves in your organization, working hand-in-hand with your team to implement strategies effectively. From identifying opportunities to navigating challenges and driving sustainable change, we are committed to turning ideas into tangible results.
+              We started our journey on July 1, 2012, with a dynamic professional team and a focus on serving the entire brand. Today, Opus works across logo design, marketing materials, brand guidelines, product design, packaging, e-commerce, event management, exhibition work, promotional items, and production.
             </p>
             <p className="font-bold text-text-one">
-              Let&apos;s build <span className="italic text-brand-blue">the future</span> — together.
+              New look, same <span className="italic text-brand-blue">vision</span> - welcome to the future of Opus Communications.
             </p>
           </div>
         </div>
@@ -137,7 +137,7 @@ export default function AboutPage() {
           <div className="relative min-h-[420px] overflow-hidden rounded-[28px] shadow-sm lg:min-h-[620px] lg:rounded-[32px]">
             <img
               src="/images/goal-img.jpg"
-              alt="Advisory conversation"
+              alt="Opus advisory conversation"
               className="absolute inset-0 h-full w-full object-cover"
             />
           </div>
@@ -145,14 +145,14 @@ export default function AboutPage() {
           <div className="flex flex-col justify-center gap-6 rounded-[28px] bg-white p-6 lg:rounded-[32px] lg:p-10">
             <LabelPill text="Our Mission" />
             <h2 className="font-serif text-[42px] leading-[1.08] tracking-[-0.01em] text-brand-navy-dark md:text-[56px] lg:text-[64px]">
-              Driven by <span className="italic text-brand-blue">Purpose</span>
+              Built for <span className="italic text-brand-blue">Brand Communication</span>
             </h2>
             <div className="flex flex-col gap-6 text-[17px] leading-[1.7] text-text-one">
               <p>
-                We help organizations create sustainable growth through clear strategy, disciplined execution, and honest collaboration.
+                Our mission is to be a pioneer in advertising and visual communication by delivering tailored creative services that answer each client&apos;s unique brand needs.
               </p>
               <p>
-                Our focus is on solutions that address today&apos;s challenges while creating the structure and confidence needed for long-term progress.
+                We work with a result-oriented mindset, combining consultation, strategy, design, production, and execution so brands can move from idea to impact with confidence.
               </p>
             </div>
             <Link
@@ -174,13 +174,13 @@ export default function AboutPage() {
             <div className="flex flex-col gap-6">
               <LabelPill text="Our Vision" />
               <h2 className="max-w-[900px] font-serif text-[42px] leading-[1.12] tracking-[-0.01em] text-brand-navy-dark md:text-[56px] lg:text-[64px]">
-                Our <span className="italic text-brand-blue">mission</span> is simple: to help ambitious organizations simplify complexity, unlock growth, and scale with <span className="italic text-brand-blue">confidence</span>.
+                We aim to be <span className="italic text-brand-blue">Pioneer One</span> in advertising and visual communication, with client commitment built into every creative decision.
               </h2>
             </div>
             <div className="relative min-h-[320px] overflow-hidden rounded-[28px] shadow-sm lg:min-h-[420px] lg:rounded-[32px]">
               <img
                 src="/images/services-bg.avif"
-                alt="Business planning session"
+                alt="Opus business planning session"
                 className="absolute inset-0 h-full w-full object-cover"
               />
             </div>
@@ -199,12 +199,12 @@ export default function AboutPage() {
       <section className="px-6 py-20 lg:px-12 lg:py-28">
         <div className="mx-auto flex max-w-[1200px] flex-col items-center gap-12 lg:gap-16">
           <div className="flex max-w-[760px] flex-col items-center gap-6 text-center">
-            <LabelPill text="Meet Our Team" />
+            <LabelPill text="Our Teams" />
             <h2 className="font-serif text-[42px] leading-[1.1] tracking-[-0.01em] text-brand-navy-dark md:text-[56px] lg:text-[64px]">
-              The <span className="italic">Faces</span> of Our Company
+              The <span className="italic">People</span> Behind the Work
             </h2>
             <p className="text-[17px] leading-[1.7] text-text-one">
-              Get to know the people who make our work meaningful and who are ready to help you write your own success story.
+              Our professional teams bring strategy, creativity, technical production, and execution together so every project can move from concept to delivery.
             </p>
           </div>
 

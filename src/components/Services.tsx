@@ -7,23 +7,23 @@ import AnimatedButton from "./AnimatedButton";
 
 const services = [
   {
-    title: "Business Strategy",
-    description: "Aligning your vision with actionable plans to capture new markets.",
+    title: "Brand Strategy & Consultancy",
+    description: "Shaping brand direction, identity systems, and communication plans from the ground up.",
     icon: "/services/Business Strategy.svg",
   },
   {
-    title: "Operations Optimization",
-    description: "Streamlining processes to maximize efficiency and reduce costs.",
+    title: "Creative & Advertising Solutions",
+    description: "Developing campaign ideas, visual communication, marketing materials, and brand stories.",
     icon: "/services/Operations Optimization.svg",
   },
   {
-    title: "Digital Transformation",
-    description: "Integrating modern technology to elevate your business capabilities.",
+    title: "Digital & Social Media Marketing",
+    description: "Planning and producing digital communication that keeps brands active, visible, and relevant.",
     icon: "/services/Digital Transformation.svg",
   },
   {
-    title: "Financial Advisory",
-    description: "Expert insights for capital allocation, risk management, and growth.",
+    title: "Activation, BTL & Event Management",
+    description: "Bringing brands alive through activations, events, exhibitions, and promotional production.",
     icon: "/services/Financial Advisory.svg",
   }
 ];
@@ -51,7 +51,7 @@ export default function Services() {
             transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
             className="text-[44px] leading-[1.1] tracking-[-0.01em] font-serif text-brand-navy-dark md:text-[56px] lg:text-[64px]"
           >
-            Our <span className="italic">Expertise</span>
+            What We <span className="italic">Create</span>
           </motion.h2>
         </div>
 
@@ -102,7 +102,7 @@ export default function Services() {
             {/* Background Image */}
             <img
               src="/images/services-bg.avif"
-              alt="Start Your Growth Journey"
+              alt="Creative agency project showcase"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
 
@@ -114,7 +114,7 @@ export default function Services() {
 
               <div className="w-full rounded-[20px] bg-[#5c616f]/80 backdrop-blur-[16px] border border-white/10 p-[16px] flex flex-col gap-8 shadow-2xl">
                 <h3 className="text-[32px] font-serif font-normal leading-[1.05] text-white">
-                  Start Your <span className="italic">Growth</span> Journey
+                  Start Your <span className="italic">Brand</span> Journey
                 </h3>
 
                 <AnimatedButton text="Get in Touch" className="h-[56px] max-w-[189px] p-[8px] pl-[20px]" />
