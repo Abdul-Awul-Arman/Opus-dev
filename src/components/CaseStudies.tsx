@@ -13,10 +13,10 @@ const caseStudies = [
       { label: "Branding", active: true },
       { label: "Launch Support", active: false },
     ],
-    title: "Built a cohesive brand launch for NLI Securities Limited.",
+    title: "Built NLI Securities from startup identity to launch presence.",
     description:
-      "Opus supported NLI Securities from startup with brand strategy, visual identity, office interior design, indoor and outdoor branding, and launch event coordination.",
-    img: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80",
+      "From logo and visual identity to office interior direction, indoor-outdoor branding, and launch event coordination, Opus helped NLI Securities enter the market with a professional, unified brand presence.",
+    img: "/images/case-studies/nli-securities-brand-launch.svg",
   },
   {
     id: 3,
@@ -24,10 +24,10 @@ const caseStudies = [
       { label: "Stall Fabrication", active: true },
       { label: "Exhibition", active: false },
     ],
-    title: "Designed and executed Bridge Chemie's DTG 2024 exhibition stall.",
+    title: "Turned Bridge Chemie's DTG stall into a brand-led visitor experience.",
     description:
-      "For DTG at ICCB Dhaka, Opus delivered a custom stall with brand-led design, modular fabrication, interactive product display planning, and on-site coordination.",
-    img: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1200&q=80",
+      "For DTG 2024 at ICCB Dhaka, Opus planned and executed a custom exhibition stall with modular fabrication, product display zones, optimized traffic flow, and on-site coordination.",
+    img: "/images/case-studies/bridge-chemie-exhibition-stall.svg",
   },
   {
     id: 4,
@@ -35,10 +35,10 @@ const caseStudies = [
       { label: "OVC Production", active: true },
       { label: "Motion Graphics", active: false },
     ],
-    title: "Produced an event OVC for Omera LPG.",
+    title: "Produced a polished event OVC for Omera LPG.",
     description:
-      "Opus handled editing, motion graphics, and final production from client-provided footage, turning event material into a polished brand story.",
-    img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80",
+      "Using client-provided footage, Opus handled editing, motion graphics, and final production to shape Omera LPG's event material into a clear, audience-ready brand story.",
+    img: "/images/case-studies/omera-lpg-ovc-production.svg",
   },
   {
     id: 5,
@@ -46,10 +46,10 @@ const caseStudies = [
       { label: "Info Video Series", active: true },
       { label: "Government Projects", active: false },
     ],
-    title: "Created info videos for national development stories.",
+    title: "Created info videos for major government development stories.",
     description:
-      "Opus produced a series of info videos on major development initiatives, enriching collected footage with graphics and motion graphics.",
-    img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80",
+      "Opus transformed collected footage into a series of development-focused info videos, using graphics and motion graphics to communicate projects such as Padma Bridge, Bangabandhu Satellite, and electrical infrastructure progress.",
+    img: "/images/case-studies/government-info-video-series.svg",
   },
 ];
 

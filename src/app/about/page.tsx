@@ -6,11 +6,24 @@ import LabelPill from "@/components/LabelPill";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import Divider from "@/components/Divider";
+import StructuredData from "@/components/StructuredData";
+import { breadcrumbJsonLd, createPageMetadata, webPageJsonLd } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "About Us - Opus Communications",
-  description: "Learn about Opus Communications, a full-service marketing, advertising, branding, event, exhibition, digital, and production agency.",
-};
+const description =
+  "Learn about Opus Communications, a full-service marketing, advertising, branding, event, exhibition, digital, and production agency founded in 2012.";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "About Us",
+  description,
+  path: "/about",
+  keywords: [
+    "about Opus Communications",
+    "advertising agency Dhaka",
+    "marketing communication agency",
+    "branding agency Bangladesh",
+    "creative agency Dhaka",
+  ],
+});
 
 const stats = [
   {
@@ -92,6 +105,19 @@ function StatCard({
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-surface-main text-brand-navy-dark">
+      <StructuredData
+        data={[
+          webPageJsonLd({
+            path: "/about",
+            name: "About Opus Communications",
+            description,
+          }),
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "About Us", path: "/about" },
+          ]),
+        ]}
+      />
       <section className="p-0 xl:p-4">
         <div className="dark-contrast relative flex h-[374px] w-full items-center justify-center overflow-hidden bg-brand-navy-dark md:h-[540px] lg:h-[680px] xl:h-[calc(100vh-2rem)] xl:rounded-[1.5rem]">
           <img

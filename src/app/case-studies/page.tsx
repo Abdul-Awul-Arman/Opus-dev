@@ -6,15 +6,57 @@ import TrustedBy from "@/components/TrustedBy";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import Divider from "@/components/Divider";
+import StructuredData from "@/components/StructuredData";
+import { absoluteUrl, breadcrumbJsonLd, createPageMetadata, webPageJsonLd } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Case Studies - Opus Communications",
-  description: "Explore Opus portfolio work across branding, events, exhibitions, video production, and motion graphics.",
-};
+const description =
+  "Explore Opus Communications portfolio work across brand identity, launch support, exhibition stall fabrication, OVC production, and motion graphics.";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "Case Studies & Portfolio",
+  description,
+  path: "/case-studies",
+  keywords: [
+    "Opus Communications portfolio",
+    "branding case study Bangladesh",
+    "stall fabrication case study",
+    "OVC production Bangladesh",
+    "motion graphics agency Dhaka",
+    "event AV production",
+  ],
+});
 
 export default function CaseStudiesPage() {
   return (
     <main className="min-h-screen bg-surface-main text-brand-navy-dark">
+      <StructuredData
+        data={[
+          webPageJsonLd({
+            path: "/case-studies",
+            name: "Opus Communications Case Studies",
+            description,
+          }),
+          {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "@id": `${absoluteUrl("/case-studies")}#portfolio`,
+            name: "Opus Communications Portfolio",
+            hasPart: [
+              "NLI Securities startup identity and launch presence",
+              "Bridge Chemie DTG 2024 brand-led exhibition stall",
+              "Omera LPG event OVC production",
+              "Government development project info video series with graphics and motion graphics",
+            ].map((name) => ({
+              "@type": "CreativeWork",
+              name,
+            })),
+          },
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Case Studies", path: "/case-studies" },
+          ]),
+        ]}
+      />
       <section className="p-0 xl:p-4">
         <div className="dark-contrast relative flex h-[374px] w-full items-center justify-center overflow-hidden bg-brand-navy-dark md:h-[540px] lg:h-[680px] xl:h-[calc(100vh-2rem)] xl:rounded-[1.5rem]">
           <img

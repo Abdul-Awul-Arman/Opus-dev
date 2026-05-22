@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Exhibition stall fabrication visual</title>
+  <desc id="desc">Abstract exhibition booth with modular walls, display counters, lighting, and visitor flow.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eef4fb"/>
+      <stop offset="0.48" stop-color="#8ba2bd"/>
+      <stop offset="1" stop-color="#07102f"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1735dd"/>
+      <stop offset="1" stop-color="#071b73"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="28" stdDeviation="30" flood-color="#06102a" flood-opacity="0.32"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <path d="M0 780 L1600 580 L1600 1000 L0 1000 Z" fill="#09112f" opacity="0.5"/>
+  <g filter="url(#shadow)">
+    <path d="M260 280 L1260 210 L1390 700 L390 790 Z" fill="#ffffff" opacity="0.88"/>
+    <path d="M390 344 L760 315 L760 732 L430 762 Z" fill="#dbe7f2"/>
+    <path d="M790 312 L1210 280 L1320 674 L790 724 Z" fill="#f7fbff"/>
+    <path d="M432 395 L720 374 L720 460 L432 486 Z" fill="url(#blue)"/>
+    <rect x="872" y="398" width="300" height="210" rx="26" fill="#0b1236" opacity="0.9"/>
+    <rect x="916" y="445" width="210" height="22" rx="11" fill="#ffffff" opacity="0.86"/>
+    <rect x="916" y="502" width="170" height="18" rx="9" fill="#ffffff" opacity="0.48"/>
+  </g>
+  <g fill="#ffffff" opacity="0.8">
+    <circle cx="520" cy="180" r="22"/>
+    <circle cx="812" cy="152" r="18"/>
+    <circle cx="1110" cy="132" r="22"/>
+  </g>
+  <g opacity="0.75">
+    <rect x="500" y="690" width="220" height="88" rx="22" fill="#1735dd"/>
+    <rect x="928" y="642" width="280" height="92" rx="24" fill="#1735dd"/>
+  </g>
+</svg>
