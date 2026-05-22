@@ -20,6 +20,7 @@ export const metadata: Metadata = createPageMetadata({
   title: "Opus Communications | Full-Service Marketing Agency in Dhaka",
   description,
   path: "/",
+  image: "/images/og/home-og.png",
   keywords: [
     "marketing agency Dhaka",
     "advertising agency Bangladesh",

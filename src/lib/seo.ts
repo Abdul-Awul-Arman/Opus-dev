@@ -6,7 +6,7 @@ export const siteConfig = {
   description:
     "A full-service marketing agency for brand strategy, advertising, digital marketing, events, exhibitions, and production.",
   logo: "/logo.svg",
-  ogImage: "/images/cta-bg-2.jpg",
+  ogImage: "/images/og/home-og.png",
   address: {
     streetAddress: "596/C Khilgaon, Road 2",
     addressLocality: "Dhaka",
@@ -27,11 +27,13 @@ export function createPageMetadata({
   description,
   path,
   keywords = [],
+  image = siteConfig.ogImage,
 }: {
   title: string;
   description: string;
   path: string;
   keywords?: string[];
+  image?: string;
 }): Metadata {
   const url = absoluteUrl(path);
   const socialTitle = title.includes(siteConfig.name)
@@ -54,7 +56,7 @@ export function createPageMetadata({
       locale: "en_US",
       images: [
         {
-          url: absoluteUrl(siteConfig.ogImage),
+          url: absoluteUrl(image),
           width: 1200,
           height: 630,
           alt: "Opus Communications full-service marketing agency",
@@ -65,7 +67,7 @@ export function createPageMetadata({
       card: "summary_large_image",
       title: socialTitle,
       description,
-      images: [absoluteUrl(siteConfig.ogImage)],
+      images: [absoluteUrl(image)],
     },
   };
 }

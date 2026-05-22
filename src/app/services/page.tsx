@@ -10,6 +10,7 @@ export const metadata: Metadata = createPageMetadata({
   title: "Services",
   description,
   path: "/services",
+  image: "/images/og/services-og.png",
   keywords: [
     "brand strategy consultancy",
     "creative advertising solutions",

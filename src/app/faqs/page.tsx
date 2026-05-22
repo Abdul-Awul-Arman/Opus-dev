@@ -68,6 +68,7 @@ export const metadata: Metadata = createPageMetadata({
   title: "FAQs",
   description,
   path: "/faqs",
+  image: "/images/og/faqs-og.png",
   keywords: [
     "Opus Communications FAQ",
     "marketing agency questions",
