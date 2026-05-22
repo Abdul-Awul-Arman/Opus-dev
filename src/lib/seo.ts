@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const siteConfig = {
   name: "Opus Communications",
-  url: "https://www.opusbd.com",
+  url: "https://opus-dev.pages.dev",
   description:
     "A full-service marketing agency for brand strategy, advertising, digital marketing, events, exhibitions, and production.",
   logo: "/logo.svg",
