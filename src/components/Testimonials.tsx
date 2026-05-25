@@ -1,5 +1,6 @@
 "use client";
 
+import { useCallback, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Play } from "lucide-react";
 import LabelPill from "./LabelPill";
@@ -36,6 +37,104 @@ const testimonials = [
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
   }
 ];
+
+function MobileTestimonialsCarousel() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const cardRefs = useRef<Array<HTMLDivElement | null>>([]);
+
+  const updateActiveIndex = useCallback(() => {
+    const visibleCards = cardRefs.current.filter(Boolean) as HTMLDivElement[];
+
+    if (visibleCards.length === 0) {
+      return;
+    }
+
+    const viewportCenter = window.innerWidth / 2;
+    const closestIndex = visibleCards.reduce(
+      (closest, card, index) => {
+        const rect = card.getBoundingClientRect();
+        const cardCenter = rect.left + rect.width / 2;
+        const distance = Math.abs(cardCenter - viewportCenter);
+
+        return distance < closest.distance ? { index, distance } : closest;
+      },
+      { index: 0, distance: Number.POSITIVE_INFINITY }
+    ).index;
+
+    setActiveIndex(closestIndex);
+  }, []);
+
+  const scrollToCard = (index: number) => {
+    cardRefs.current[index]?.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+      inline: "center",
+    });
+    setActiveIndex(index);
+  };
+
+  return (
+    <div className="md:hidden">
+      <div
+        onScroll={updateActiveIndex}
+        className="mobile-testimonials-scroll flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth px-[calc((100vw-328px)/2)]"
+      >
+        {testimonials.map((testimonial, index) => (
+          <div
+            key={testimonial.name}
+            ref={(node) => {
+              cardRefs.current[index] = node;
+            }}
+            className="relative h-[420px] w-[328px] shrink-0 snap-center overflow-hidden rounded-[28px]"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-[#9ba9bd] via-[#6f7e94] to-[#2b3142]" />
+            <div className="absolute inset-x-0 top-0 h-1/2 bg-white/10" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent opacity-80" />
+
+            <div className="absolute bottom-5 left-5 right-5 z-10 flex flex-col gap-5 rounded-[20px] border border-white/10 bg-[#2a2c33]/70 p-5 shadow-2xl backdrop-blur-md">
+              <p className="text-[21px] font-medium leading-[1.35] text-white">
+                &quot;{testimonial.quote}&quot;
+              </p>
+
+              <div className="mt-1 flex items-end justify-between gap-4">
+                <div className="flex min-w-0 flex-col gap-1.5">
+                  <span className="font-serif text-[26px] leading-none text-white">
+                    {testimonial.name}
+                  </span>
+                  <span className="text-[16px] font-semibold text-white/85">
+                    {testimonial.role}
+                  </span>
+                </div>
+
+                <button className="flex h-[68px] w-[68px] shrink-0 items-center justify-center rounded-full bg-white shadow-lg">
+                  <Play
+                    className="ml-0.5 h-8 w-8 text-brand-navy-dark"
+                    fill="currentColor"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="mt-7 flex items-center justify-center gap-3">
+        {testimonials.map((testimonial, index) => (
+          <button
+            key={testimonial.name}
+            type="button"
+            aria-label={`Show testimonial ${index + 1}`}
+            aria-current={activeIndex === index}
+            onClick={() => scrollToCard(index)}
+            className={`h-2.5 w-2.5 rounded-full transition-colors ${
+              activeIndex === index ? "bg-brand-blue" : "bg-brand-blue-light/70"
+            }`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export default function Testimonials() {
   return (
@@ -76,8 +175,15 @@ export default function Testimonials() {
           .animate-custom-marquee:hover {
             animation-play-state: paused;
           }
+          .mobile-testimonials-scroll {
+            scrollbar-width: none;
+          }
+          .mobile-testimonials-scroll::-webkit-scrollbar {
+            display: none;
+          }
         `}</style>
-        <div className="flex w-max animate-custom-marquee gap-6 px-6">
+        <MobileTestimonialsCarousel />
+        <div className="hidden w-max animate-custom-marquee gap-6 px-6 md:flex">
           {[...testimonials, ...testimonials].map((testimonial, index) => (
             <div
               key={index}

@@ -11,10 +11,10 @@ export default function OurGoal() {
 
         {/* Left Content Card */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, x: -80 }}
+          whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="w-full lg:w-1/2 bg-white rounded-[28px] lg:rounded-[32px] p-[24px] flex flex-col justify-center gap-6"
         >
           <LabelPill text="Our Mission" />
@@ -38,10 +38,10 @@ export default function OurGoal() {
 
         {/* Right Image */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, x: 80 }}
+          whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+          transition={{ duration: 0.8, delay: 0.12, ease: [0.16, 1, 0.3, 1] }}
           className="relative w-full lg:w-1/2 min-h-[360px] lg:min-h-full rounded-[28px] lg:rounded-[32px] overflow-hidden shadow-sm"
         >
           <img

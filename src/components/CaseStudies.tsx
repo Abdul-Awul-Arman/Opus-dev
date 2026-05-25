@@ -73,8 +73,8 @@ function CaseStudyCard({
     offset: ["start end", "start start"],
   });
 
-  // Width grows from 80% → 100% as card scrolls into top of viewport
-  const width = useTransform(scrollYProgress, [0, 1], ["80%", "100%"]);
+  // Card scales from 90% → 100% as it scrolls into place.
+  const scale = useTransform(scrollYProgress, [0, 1], [0.9, 1]);
 
   return (
     <div
@@ -83,8 +83,8 @@ function CaseStudyCard({
       style={{ top: "16px" }}
     >
       <motion.div
-        style={{ width }}
-        className="relative h-[640px] rounded-[2rem] overflow-hidden shadow-lg md:h-[100vh]"
+        style={{ scale, transformOrigin: "center center" }}
+        className="relative h-[640px] w-full rounded-[2rem] overflow-hidden shadow-lg md:h-[100vh]"
       >
         {/* Background Image */}
         <img

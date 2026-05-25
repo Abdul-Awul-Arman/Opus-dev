@@ -14,6 +14,58 @@ const navLinks = [
   { label: "FAQs", href: "/faqs" },
 ];
 
+const socialLinks = [
+  {
+    label: "Facebook",
+    href: "#",
+    icon: (
+      <path
+        d="M15 8h-2.2c-.9 0-1.3.5-1.3 1.4V12H15l-.5 3.2h-3V23H8v-7.8H5V12h3V9.1C8 6.2 9.7 4 13.1 4H15v4Z"
+        fill="currentColor"
+      />
+    ),
+  },
+  {
+    label: "Instagram",
+    href: "#",
+    icon: (
+      <>
+        <rect x="4" y="4" width="16" height="16" rx="4.5" stroke="currentColor" strokeWidth="2.2" />
+        <circle cx="12" cy="12" r="3.5" stroke="currentColor" strokeWidth="2.2" />
+        <circle cx="16.8" cy="7.2" r="1.1" fill="currentColor" />
+      </>
+    ),
+  },
+  {
+    label: "X",
+    href: "#",
+    icon: (
+      <path
+        d="M5 5l14 14M19 5 5 19M8.2 5h-3l10.6 14h3L8.2 5Z"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2.2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    ),
+  },
+  {
+    label: "LinkedIn",
+    href: "#",
+    icon: (
+      <>
+        <path d="M6.5 9.5H9V20H6.5V9.5Z" fill="currentColor" />
+        <path d="M7.8 8.1a1.55 1.55 0 1 0 0-3.1 1.55 1.55 0 0 0 0 3.1Z" fill="currentColor" />
+        <path
+          d="M11.2 9.5h2.4v1.4c.6-.9 1.5-1.6 3.1-1.6 2.4 0 4.1 1.6 4.1 4.8V20h-2.5v-5.4c0-1.8-.7-2.8-2.1-2.8-1.5 0-2.4 1-2.4 2.8V20h-2.6V9.5Z"
+          fill="currentColor"
+        />
+      </>
+    ),
+  },
+];
+
 export default function SiteHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -23,15 +75,15 @@ export default function SiteHeader() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-        className="fixed top-0 left-0 z-50 flex h-[76px] w-full items-center justify-between border-b border-white/10 bg-brand-navy-muted px-6 py-3 xl:absolute xl:top-6 xl:left-1/2 xl:h-[80px] xl:w-[1152px] xl:-translate-x-1/2 xl:rounded-[16px] xl:border xl:border-white/15 xl:bg-white/12 xl:p-[16px] xl:backdrop-blur-[16px]"
+        className="fixed top-0 left-0 z-50 flex h-[76px] w-full max-w-full items-center justify-between overflow-hidden border-b border-white/10 bg-brand-navy-muted px-4 py-3 xl:absolute xl:top-6 xl:left-1/2 xl:h-[80px] xl:w-[1152px] xl:-translate-x-1/2 xl:rounded-[16px] xl:border xl:border-white/15 xl:bg-white/12 xl:p-[16px] xl:backdrop-blur-[16px]"
       >
         <Link href="/" className="flex items-center gap-4" aria-label="Go to homepage">
-          <div className="relative flex h-[48px] w-[132px] items-center justify-center xl:h-24 xl:w-26">
+          <div className="relative flex h-[50px] w-[100px] shrink-0 items-center justify-center overflow-hidden sm:w-[156px] xl:h-24 xl:w-26">
             <Image
               src="/logo.svg"
               alt="Opus Logo"
               fill
-              className="object-contain"
+              className="object-contain brightness-0 invert"
               priority
             />
           </div>
@@ -69,27 +121,77 @@ export default function SiteHeader() {
       </motion.nav>
 
       {isMenuOpen && (
-        <div className="fixed left-0 right-0 top-[76px] z-40 border-b border-white/10 bg-brand-navy-muted px-6 py-6 xl:hidden">
-          <div className="flex flex-col gap-5">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.25, ease: "easeOut" }}
+          className="fixed inset-0 z-[60] flex h-[100dvh] flex-col bg-brand-navy-muted px-8 pb-10 pt-5 text-white xl:hidden"
+        >
+          <div className="flex items-start justify-between">
+            <Link
+              href="/"
+              onClick={() => setIsMenuOpen(false)}
+              className="relative block h-[56px] w-[190px] overflow-hidden"
+              aria-label="Go to homepage"
+            >
+              <Image
+                src="/logo.svg"
+                alt="Opus Logo"
+                fill
+                className="object-contain object-left brightness-0 invert"
+                priority
+              />
+            </Link>
+
+            <button
+              type="button"
+              aria-label="Close menu"
+              onClick={() => setIsMenuOpen(false)}
+              className="flex h-12 w-12 items-center justify-center rounded-full text-white transition-colors hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+            >
+              <X size={38} strokeWidth={2.4} />
+            </button>
+          </div>
+
+          <div className="flex flex-1 flex-col items-center justify-center gap-8 pb-4">
+            <nav className="flex flex-col items-center gap-7">
             {navLinks.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
                 onClick={() => setIsMenuOpen(false)}
-                className="text-[18px] font-medium text-white"
+                className="text-[22px] font-semibold leading-none text-white"
               >
                 {link.label}
               </Link>
             ))}
+            </nav>
+
             <Link
               href="/#contact"
               onClick={() => setIsMenuOpen(false)}
-              className="mt-2 flex h-[52px] w-full items-center justify-center rounded-full bg-[#EAEFF5] px-6 text-base font-bold text-brand-navy-dark"
+              className="mt-4 flex h-[60px] min-w-[168px] items-center justify-center rounded-full bg-[#EAEFF5] px-8 text-[20px] font-bold text-brand-navy-dark"
             >
               Contact Us
             </Link>
+
+            <div className="mt-1 flex items-center justify-center gap-9">
+              {socialLinks.map((link) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  aria-label={link.label}
+                  className="flex h-7 w-7 items-center justify-center text-white transition-opacity hover:opacity-75"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true" className="h-7 w-7">
+                    {link.icon}
+                  </svg>
+                </Link>
+              ))}
+            </div>
           </div>
-        </div>
+        </motion.div>
       )}
     </>
   );

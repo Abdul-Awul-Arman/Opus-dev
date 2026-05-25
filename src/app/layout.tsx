@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Instrument_Serif } from "next/font/google";
 import "./globals.css";
-import LenisProvider from "@/components/LenisProvider";
 import StructuredData from "@/components/StructuredData";
 import { absoluteUrl, organizationJsonLd, siteConfig, websiteJsonLd } from "@/lib/seo";
 
@@ -75,9 +74,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${instrumentSerif.variable}`}>
       <body className="bg-surface-main text-brand-navy-dark font-sans antialiased">
         <StructuredData data={[organizationJsonLd(), websiteJsonLd()]} />
-        <LenisProvider>
-          {children}
-        </LenisProvider>
+        {children}
       </body>
     </html>
   );
