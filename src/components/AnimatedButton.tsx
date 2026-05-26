@@ -27,7 +27,7 @@ export default function AnimatedButton({
     >
       <Link
         href={href || "/contact"}
-        className={`group/btn flex h-[56px] min-w-[244px] max-w-full items-center justify-center gap-3 rounded-full bg-[#ebf1f8] p-3 text-[16px] font-bold text-brand-navy-dark transition-all duration-300 hover:bg-white ${className}`}
+        className={`group/btn flex h-[56px] min-w-[200px] max-w-full items-center justify-center gap-3 rounded-full bg-[#ebf1f8] p-3 text-[16px] font-bold text-brand-navy-dark transition-all duration-300 hover:bg-white ${className}`}
       >
         {text}
         <span className="ml-2 flex h-10 w-10 items-center justify-center rounded-full bg-brand-navy-dark text-white transition-colors duration-300 group-hover/btn:bg-black">

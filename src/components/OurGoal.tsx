@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 import LabelPill from "./LabelPill";
 
 export default function OurGoal() {
@@ -28,12 +29,15 @@ export default function OurGoal() {
             Our commitment to clients is deeply ingrained in our culture. We tailor every branding, campaign, event, exhibition, and production assignment to the unique needs of the brand, with a result-oriented mindset and a long-term view of communication.
           </p>
 
-          <button className="group flex h-[56px] w-full max-w-[240px] items-center justify-center gap-3 rounded-full bg-[#121b60] pl-6 pr-2 text-[16px] font-bold text-white transition-colors duration-300 hover:bg-black md:w-max md:max-w-none">
+          <Link
+            href="/about"
+            className="group flex h-[56px] w-full max-w-[240px] items-center justify-center gap-3 rounded-full bg-[#121b60] pl-6 pr-2 text-[16px] font-bold text-white transition-colors duration-300 hover:bg-black md:w-max md:max-w-none"
+          >
             Meet Opus
             <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center transition-transform duration-300 group-hover:rotate-45">
               <ArrowUpRight size={20} className="text-[#121b60]" />
             </div>
-          </button>
+          </Link>
         </motion.div>
 
         {/* Right Image */}
