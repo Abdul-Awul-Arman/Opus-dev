@@ -23,11 +23,11 @@ export default function AnimatedButton({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.7, delay, ease: [0.16, 1, 0.3, 1] }}
-      className="w-full md:w-max"
+      className="w-max max-w-full"
     >
       <Link
         href={href || "/contact"}
-        className={`group/btn flex h-[56px] items-center justify-center gap-3 rounded-full bg-[#ebf1f8] p-3 text-[16px] font-bold text-brand-navy-dark transition-all duration-300 hover:bg-white ${className}`}
+        className={`group/btn flex h-[56px] min-w-[244px] max-w-full items-center justify-center gap-3 rounded-full bg-[#ebf1f8] p-3 text-[16px] font-bold text-brand-navy-dark transition-all duration-300 hover:bg-white ${className}`}
       >
         {text}
         <span className="ml-2 flex h-10 w-10 items-center justify-center rounded-full bg-brand-navy-dark text-white transition-colors duration-300 group-hover/btn:bg-black">
