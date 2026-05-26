@@ -18,17 +18,22 @@ export default function AnimatedButton({
   href,
 }: AnimatedButtonProps) {
   return (
-    <Link href={href || "/contact"}>
-    
-    <motion.button
-      
-      className={`group/btn flex justify-center p-3 h-[56px] items-center gap-3 bg-[#ebf1f8] text-[16px] rounded-full text-brand-navy-dark font-bold hover:bg-white transition-all duration-300 transform  ${className}`}
+    <motion.div
+      initial={{ opacity: 0, y: 34 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-40px" }}
+      transition={{ duration: 0.7, delay, ease: [0.16, 1, 0.3, 1] }}
+      className="w-full md:w-max"
     >
-      {text}
-      <div className="w-10 h-10 bg-brand-navy-dark rounded-full flex items-center justify-center text-white ml-2 group-hover/btn:bg-black">
-        <ArrowRight size={20} className="transition-transform duration-300 transform -rotate-45 group-hover/btn:rotate-0" />
-      </div>
-    </motion.button>
-    </Link>
+      <Link
+        href={href || "/contact"}
+        className={`group/btn flex h-[56px] items-center justify-center gap-3 rounded-full bg-[#ebf1f8] p-3 text-[16px] font-bold text-brand-navy-dark transition-all duration-300 hover:bg-white ${className}`}
+      >
+        {text}
+        <span className="ml-2 flex h-10 w-10 items-center justify-center rounded-full bg-brand-navy-dark text-white transition-colors duration-300 group-hover/btn:bg-black">
+          <ArrowRight size={20} className="-rotate-45 transform transition-transform duration-300 group-hover/btn:rotate-0" />
+        </span>
+      </Link>
+    </motion.div>
   );
 }
