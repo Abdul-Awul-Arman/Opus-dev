@@ -77,7 +77,7 @@ function MobileTestimonialsCarousel() {
     <div className="md:hidden">
       <div
         onScroll={updateActiveIndex}
-        className="mobile-testimonials-scroll flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth px-[calc((100vw-328px)/2)]"
+        className="mobile-testimonials-scroll flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth px-[max(24px,calc((100vw-328px)/2))]"
       >
         {testimonials.map((testimonial, index) => (
           <div
@@ -85,7 +85,7 @@ function MobileTestimonialsCarousel() {
             ref={(node) => {
               cardRefs.current[index] = node;
             }}
-            className="relative h-[420px] w-[328px] shrink-0 snap-center overflow-hidden rounded-[28px]"
+            className="relative h-[420px] w-[calc(100vw-48px)] max-w-[328px] shrink-0 snap-center overflow-hidden rounded-[28px]"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-[#9ba9bd] via-[#6f7e94] to-[#2b3142]" />
             <div className="absolute inset-x-0 top-0 h-1/2 bg-white/10" />

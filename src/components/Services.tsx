@@ -22,6 +22,11 @@ const services = [
     icon: "/services/Digital Transformation.svg",
   },
   {
+    title: "Web, Mobile & Desktop App Development",
+    description: "Building practical websites, mobile apps, desktop tools, dashboards, and software systems for business workflows.",
+    icon: "/services/Digital Transformation.svg",
+  },
+  {
     title: "Activation, BTL & Event Management",
     description: "Bringing brands alive through activations, events, exhibitions, and promotional production.",
     icon: "/services/Financial Advisory.svg",

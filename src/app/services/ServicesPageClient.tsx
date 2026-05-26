@@ -14,7 +14,7 @@ const services = [
   {
     title: "Brand Strategy & Design",
     icon: "/services/Business Strategy.svg",
-    image: "https://images.unsplash.com/photo-1573497491208-6b1acb260507?auto=format&fit=crop&w=1200&q=85",
+    image: "/images/brand-strategy-design-unsplash.jpg",
     why:
       "A clear brand system gives every communication a stronger foundation, from first impression to long-term recognition.",
     included: [
@@ -51,6 +51,20 @@ const services = [
       "Website & Digital Communication Support",
       "Content Planning & Creative Assets",
       "Campaign Rollout Support",
+    ],
+  },
+  {
+    title: "Web, Mobile & Desktop App Development",
+    icon: "/services/Digital Transformation.svg",
+    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=85",
+    why:
+      "Reliable software helps teams work faster, serve customers better, and turn digital touchpoints into measurable business tools.",
+    included: [
+      "Business Websites & Landing Pages",
+      "Mobile App Design & Development",
+      "Desktop Application Development",
+      "Admin Panels, Dashboards & Internal Tools",
+      "Maintenance, Feature Updates & Technical Support",
     ],
   },
   {
@@ -118,9 +132,9 @@ export default function ServicesPageClient() {
                       {service.title}
                     </h3>
                     <AnimatedButton
-                      className="mt-6 w-[290px] text-[16px] font-semibold"
+                      className="mt-6  text-[16px] font-semibold"
                       text="Start a Project"
-                      href="/#contact"
+                      href="/contact"
                     />
                   </div>
                 </div>

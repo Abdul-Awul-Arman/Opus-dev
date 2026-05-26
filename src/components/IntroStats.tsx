@@ -1,19 +1,25 @@
 "use client";
 
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import LabelPill from "./LabelPill";
 
 const stats = [
   {
     value: "14+",
+    countTo: 14,
+    suffix: "+",
     description: "Years of creative, strategic, and marketing communication experience.",
   },
   {
     value: "360",
+    countTo: 360,
+    suffix: "°",
     description: "Degree creative services from brand strategy to launch, activation, and production.",
   },
   {
     value: "7",
+    countTo: 7,
     description: "Core service areas across branding, digital, events, exhibitions, and content creation.",
   },
   {
@@ -21,6 +27,53 @@ const stats = [
     description: "Sector experience with corporate, financial, industrial, government, and consumer brands.",
   },
 ];
+
+function CountUpStat({
+  value,
+  countTo,
+  suffix = "",
+}: {
+  value: string;
+  countTo?: number;
+  suffix?: string;
+}) {
+  const [displayValue, setDisplayValue] = useState(countTo === undefined ? value : `0${suffix}`);
+  const hasAnimated = useRef(false);
+
+  const startCount = () => {
+    if (hasAnimated.current || countTo === undefined) {
+      return;
+    }
+
+    hasAnimated.current = true;
+    const duration = 1400;
+    const startedAt = performance.now();
+
+    const tick = (now: number) => {
+      const progress = Math.min((now - startedAt) / duration, 1);
+      const easedProgress = 1 - Math.pow(1 - progress, 3);
+      const nextValue = Math.round(easedProgress * countTo);
+
+      setDisplayValue(`${nextValue}${suffix}`);
+
+      if (progress < 1) {
+        requestAnimationFrame(tick);
+      }
+    };
+
+    requestAnimationFrame(tick);
+  };
+
+  return (
+    <motion.h3
+      onViewportEnter={startCount}
+      viewport={{ once: true, margin: "-80px" }}
+      className="text-[56px] md:text-[64px] font-serif font-normal text-brand-navy-dark"
+    >
+      {displayValue}
+    </motion.h3>
+  );
+}
 
 export default function IntroStats() {
   return (
@@ -87,9 +140,7 @@ export default function IntroStats() {
               key={index}
               className="bg-white rounded-[28px] p-[24px] flex flex-col gap-6 shadow-[0_8px_30px_rgba(13,27,42,0.02)] border border-brand-navy-dark/[0.04]"
             >
-              <h3 className="text-[56px] md:text-[64px] font-serif font-normal text-brand-navy-dark">
-                {stat.value}
-              </h3>
+              <CountUpStat value={stat.value} countTo={stat.countTo} suffix={stat.suffix} />
               <p className="text-[16px]  leading-[1.6] text-text-one font-sans font-normal">
                 {stat.description}
               </p>

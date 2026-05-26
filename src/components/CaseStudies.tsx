@@ -1,57 +1,12 @@
 "use client";
 
-import { type ReactNode, useRef } from "react";
+import { type ReactNode, useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import LabelPill from "./LabelPill";
 import AnimatedButton from "./AnimatedButton";
-
-const caseStudies = [
-  {
-    id: 1,
-    tags: [
-      { label: "Branding", active: true },
-      { label: "Launch Support", active: false },
-    ],
-    title: "Built NLI Securities from startup identity to launch presence.",
-    description:
-      "From logo and visual identity to office interior direction, indoor-outdoor branding, and launch event coordination, Opus helped NLI Securities enter the market with a professional, unified brand presence.",
-    img: "/images/case-studies/nli-securities-brand-launch.svg",
-  },
-  {
-    id: 3,
-    tags: [
-      { label: "Stall Fabrication", active: true },
-      { label: "Exhibition", active: false },
-    ],
-    title: "Turned Bridge Chemie's DTG stall into a brand-led visitor experience.",
-    description:
-      "For DTG 2024 at ICCB Dhaka, Opus planned and executed a custom exhibition stall with modular fabrication, product display zones, optimized traffic flow, and on-site coordination.",
-    img: "/images/case-studies/bridge-chemie-exhibition-stall.svg",
-  },
-  {
-    id: 4,
-    tags: [
-      { label: "OVC Production", active: true },
-      { label: "Motion Graphics", active: false },
-    ],
-    title: "Produced a polished event OVC for Omera LPG.",
-    description:
-      "Using client-provided footage, Opus handled editing, motion graphics, and final production to shape Omera LPG's event material into a clear, audience-ready brand story.",
-    img: "/images/case-studies/omera-lpg-ovc-production.svg",
-  },
-  {
-    id: 5,
-    tags: [
-      { label: "Info Video Series", active: true },
-      { label: "Government Projects", active: false },
-    ],
-    title: "Created info videos for major government development stories.",
-    description:
-      "Opus transformed collected footage into a series of development-focused info videos, using graphics and motion graphics to communicate projects such as Padma Bridge, Bangabandhu Satellite, and electrical infrastructure progress.",
-    img: "/images/case-studies/government-info-video-series.svg",
-  },
-];
+import { caseStudies, type CaseStudy } from "@/data/caseStudies";
 
 interface CaseStudiesProps {
   label?: string;
@@ -60,13 +15,30 @@ interface CaseStudiesProps {
   showViewMore?: boolean;
 }
 
+function useIsDesktop() {
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 768px)");
+    const updateIsDesktop = () => setIsDesktop(mediaQuery.matches);
+
+    updateIsDesktop();
+    mediaQuery.addEventListener("change", updateIsDesktop);
+
+    return () => mediaQuery.removeEventListener("change", updateIsDesktop);
+  }, []);
+
+  return isDesktop;
+}
+
 // Individual card with scroll-linked scale animation
 function CaseStudyCard({
   study,
 }: {
-  study: (typeof caseStudies)[0];
+  study: CaseStudy;
 }) {
   const ref = useRef<HTMLDivElement>(null);
+  const isDesktop = useIsDesktop();
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -83,7 +55,7 @@ function CaseStudyCard({
       style={{ top: "16px" }}
     >
       <motion.div
-        style={{ scale, transformOrigin: "center center" }}
+        style={isDesktop ? { scale, transformOrigin: "center center" } : undefined}
         className="relative h-[640px] w-full rounded-[2rem] overflow-hidden shadow-lg md:h-[100vh]"
       >
         {/* Background Image */}
@@ -127,6 +99,7 @@ function CaseStudyCard({
           {/* Button */}
           <AnimatedButton
             text="View Case Study"
+            href={`/case-studies/${study.slug}`}
             className="h-[56px] w-full md:w-max p-[8px] pl-[20px] shrink-0 bg-white"
           />
         </div>
@@ -198,12 +171,15 @@ export default function CaseStudies({
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="flex justify-center"
         >
-          <button className="group flex h-[56px] w-full max-w-[320px] items-center justify-center gap-3 rounded-full bg-[#121b60] pl-6 pr-2 text-[16px] font-medium text-white transition-colors duration-300 hover:bg-black md:w-auto md:max-w-none">
+          <Link
+            href="/case-studies"
+            className="group flex h-[56px] w-full max-w-[320px] items-center justify-center gap-3 rounded-full bg-[#121b60] pl-6 pr-2 text-[16px] font-medium text-white transition-colors duration-300 hover:bg-black md:w-auto md:max-w-none"
+          >
             View More Case Studies
             <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center transition-transform duration-300 group-hover:rotate-45">
               <ArrowUpRight size={20} className="text-[#121b60]" />
             </div>
-          </button>
+          </Link>
         </motion.div>
         ) : null}
       </div>

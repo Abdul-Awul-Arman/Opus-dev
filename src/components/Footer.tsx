@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 const menuLinks = [
@@ -45,21 +46,20 @@ export default function Footer() {
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-2 flex flex-col gap-8 pr-4 lg:pr-12"
           >
-            <div className="flex items-center gap-3">
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15 3H8L4 12H13L9 21H16L20 12H11L15 3Z" fill="white"/>
-              </svg>
-              <div className="flex flex-col">
-                <span className="font-sans font-semibold text-[24px] leading-none tracking-tight">Opus</span>
-                <span className="font-sans text-[11px] tracking-[0.15em] uppercase mt-1 text-white/80">Communications</span>
-              </div>
-            </div>
+            <Link href="/" className="relative block h-[58px] w-[150px] overflow-hidden" aria-label="Go to homepage">
+              <Image
+                src="/logo.svg"
+                alt="Opus Logo"
+                fill
+                className="object-contain object-left brightness-0 invert"
+              />
+            </Link>
             <p className="text-[15px] leading-[1.6] text-white/90 max-w-[340px] font-medium">
               Opus Communications is a full-service marketing agency creating brand strategy, design, campaigns, events, exhibitions, production, and digital communication.
             </p>
-            <button className="bg-white text-brand-navy-dark text-[15px] font-bold py-3.5 px-8 rounded-full w-max hover:bg-white/90 transition-colors mt-2">
+            <Link href="/contact" className="bg-white text-brand-navy-dark text-[15px] font-bold py-3.5 px-8 rounded-full w-max hover:bg-white/90 transition-colors mt-2">
               Contact Us
-            </button>
+            </Link>
           </motion.div>
 
           {/* Menu */}

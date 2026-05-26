@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Icon: equals
+  Set: Phosphor
+  Author: Phosphor Icons (https://github.com/phosphor-icons/core)
+  License: MIT (https://github.com/phosphor-icons/core/blob/main/LICENSE)
+  Source: https://iconify.design
+-->
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 256 256"
+     width="256"
+     height="256">
+  <title>Minimalist Hamburger Menu Icon</title>
+  <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+             xmlns:dc="http://purl.org/dc/elements/1.1/"
+             xmlns:cc="http://creativecommons.org/ns#">
+      <cc:Work rdf:about="">
+        <dc:title>Minimalist Hamburger Menu Icon</dc:title>
+        <dc:description>A simple two-line icon representing a hamburger menu, commonly used in user interfaces for navigation. Ideal for web design, mobile apps, and software development projects.</dc:description>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Phosphor Icons</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:source>https://github.com/phosphor-icons/core</dc:source>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>Phosphor Icons</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <cc:license rdf:resource="https://github.com/phosphor-icons/core/blob/main/LICENSE"/>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>hamburger-menu</rdf:li>
+            <rdf:li>menu-icon</rdf:li>
+            <rdf:li>navigation-icon</rdf:li>
+            <rdf:li>UI-icon</rdf:li>
+            <rdf:li>UX-design</rdf:li>
+            <rdf:li>mobile-app-icon</rdf:li>
+            <rdf:li>web-design-icon</rdf:li>
+            <rdf:li>minimalist-icon</rdf:li>
+            <rdf:li>simple-menu</rdf:li>
+            <rdf:li>two-line-icon</rdf:li>
+            <rdf:li>navigation-bar</rdf:li>
+            <rdf:li>app-interface</rdf:li>
+            <rdf:li>responsive-design</rdf:li>
+            <rdf:li>menu-button</rdf:li>
+            <rdf:li>flat-design</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License rdf:about="https://github.com/phosphor-icons/core/blob/main/LICENSE">
+        <dc:title>MIT (MIT)</dc:title>
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <path fill="currentColor" d="M224 160a8 8 0 0 1-8 8H40a8 8 0 0 1 0-16h176a8 8 0 0 1 8 8M40 104h176a8 8 0 0 0 0-16H40a8 8 0 0 0 0 16"/>
+</svg>

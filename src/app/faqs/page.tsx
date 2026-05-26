@@ -134,7 +134,7 @@ export default function FAQsPage() {
           <FAQList />
 
           <Link
-            href="/#contact"
+            href="/contact"
             className="group flex h-[56px] w-[320px] max-w-full items-center justify-between gap-3 rounded-full bg-[#121b60] pl-6 pr-2 text-[16px] font-bold text-white whitespace-nowrap transition-colors duration-300 hover:bg-black md:w-max md:max-w-none"
           >
             Start a Project

@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import Divider from "@/components/Divider";
 import StructuredData from "@/components/StructuredData";
 import { absoluteUrl, breadcrumbJsonLd, createPageMetadata, webPageJsonLd } from "@/lib/seo";
+import { caseStudies } from "@/data/caseStudies";
 
 const description =
   "Explore Opus Communications portfolio work across brand identity, launch support, exhibition stall fabrication, OVC production, and motion graphics.";
@@ -42,14 +43,10 @@ export default function CaseStudiesPage() {
             "@type": "CollectionPage",
             "@id": `${absoluteUrl("/case-studies")}#portfolio`,
             name: "Opus Communications Portfolio",
-            hasPart: [
-              "NLI Securities startup identity and launch presence",
-              "Bridge Chemie DTG 2024 brand-led exhibition stall",
-              "Omera LPG event OVC production",
-              "Government development project info video series with graphics and motion graphics",
-            ].map((name) => ({
+            hasPart: caseStudies.map((study) => ({
               "@type": "CreativeWork",
-              name,
+              name: study.title,
+              url: absoluteUrl(`/case-studies/${study.slug}`),
             })),
           },
           breadcrumbJsonLd([

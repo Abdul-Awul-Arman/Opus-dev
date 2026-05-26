@@ -3,8 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -103,7 +102,7 @@ export default function SiteHeader() {
         </div>
 
         <Link
-          href="/#contact"
+          href="/contact"
           className="hidden rounded-full bg-[#EAEFF5] px-6 py-3 text-base font-bold text-brand-navy-dark shadow-xl transition-all hover:scale-105 hover:bg-[#ebf1f8] xl:block"
         >
           Contact Us
@@ -116,44 +115,38 @@ export default function SiteHeader() {
           onClick={() => setIsMenuOpen((open) => !open)}
           className="flex h-11 w-11 items-center justify-center rounded-full text-white transition-colors hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70 xl:hidden"
         >
-          {isMenuOpen ? <X size={30} /> : <Menu size={32} />}
+          <span className="relative block h-11 w-11" aria-hidden="true">
+            <motion.span
+              animate={
+                isMenuOpen
+                  ? { top: "calc(50% - 1.5px)", rotate: 45 }
+                  : { top: "calc(36.3% - 1.5px)", rotate: 0 }
+              }
+              transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
+              className="absolute left-1/2 h-[3px] w-6 -translate-x-1/2 rounded bg-current"
+            />
+            <motion.span
+              animate={
+                isMenuOpen
+                  ? { top: "calc(50% - 1.5px)", rotate: -45 }
+                  : { top: "calc(63.6% - 1.5px)", rotate: 0 }
+              }
+              transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
+              className="absolute left-1/2 h-[3px] w-6 -translate-x-1/2 rounded bg-current"
+            />
+          </span>
         </button>
       </motion.nav>
 
-      {isMenuOpen && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.25, ease: "easeOut" }}
-          className="fixed inset-0 z-[60] flex h-[100dvh] flex-col bg-brand-navy-muted px-8 pb-10 pt-5 text-white xl:hidden"
-        >
-          <div className="flex items-start justify-between">
-            <Link
-              href="/"
-              onClick={() => setIsMenuOpen(false)}
-              className="relative block h-[56px] w-[190px] overflow-hidden"
-              aria-label="Go to homepage"
-            >
-              <Image
-                src="/logo.svg"
-                alt="Opus Logo"
-                fill
-                className="object-contain object-left brightness-0 invert"
-                priority
-              />
-            </Link>
-
-            <button
-              type="button"
-              aria-label="Close menu"
-              onClick={() => setIsMenuOpen(false)}
-              className="flex h-12 w-12 items-center justify-center rounded-full text-white transition-colors hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
-            >
-              <X size={38} strokeWidth={2.4} />
-            </button>
-          </div>
-
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -18 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -18 }}
+            transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+            className="fixed inset-x-0 top-[76px] z-40 flex h-[calc(100dvh-76px)] flex-col bg-brand-navy-muted px-8 pb-10 pt-8 text-white xl:hidden"
+          >
           <div className="flex flex-1 flex-col items-center justify-center gap-8 pb-4">
             <nav className="flex flex-col items-center gap-7">
             {navLinks.map((link) => (
@@ -161,7 +154,7 @@ export default function SiteHeader() {
                 key={link.label}
                 href={link.href}
                 onClick={() => setIsMenuOpen(false)}
-                className="text-[22px] font-semibold leading-none text-white"
+                className="text-[15px] font-semibold leading-none text-white"
               >
                 {link.label}
               </Link>
@@ -169,9 +162,9 @@ export default function SiteHeader() {
             </nav>
 
             <Link
-              href="/#contact"
+              href="/contact"
               onClick={() => setIsMenuOpen(false)}
-              className="mt-4 flex h-[60px] min-w-[168px] items-center justify-center rounded-full bg-[#EAEFF5] px-8 text-[20px] font-bold text-brand-navy-dark"
+              className="mt-3 flex h-[48px] min-w-[136px] items-center justify-center rounded-full bg-[#EAEFF5] px-6 text-[15px] font-bold text-brand-navy-dark"
             >
               Contact Us
             </Link>
@@ -191,8 +184,9 @@ export default function SiteHeader() {
               ))}
             </div>
           </div>
-        </motion.div>
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 }

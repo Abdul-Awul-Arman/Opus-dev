@@ -6,7 +6,7 @@ import LabelPill from "./LabelPill";
 
 export default function OurGoal() {
   return (
-    <section className="w-full px-6 lg:px-12 py-20 lg:py-28">
+    <section className="w-full overflow-hidden px-6 lg:px-12 py-20 lg:py-28">
       <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row gap-6">
 
         {/* Left Content Card */}

@@ -4,7 +4,7 @@ import { absoluteUrl, breadcrumbJsonLd, createPageMetadata, siteConfig, webPageJ
 import ServicesPageClient from "./ServicesPageClient";
 
 const description =
-  "Explore Opus Communications services for brand strategy, advertising, digital marketing, activation, event management, exhibitions, and content production.";
+  "Explore Opus Communications services for brand strategy, advertising, digital marketing, software development, activation, event management, exhibitions, and content production.";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Services",
@@ -15,6 +15,8 @@ export const metadata: Metadata = createPageMetadata({
     "brand strategy consultancy",
     "creative advertising solutions",
     "digital social media marketing",
+    "web mobile desktop app development",
+    "software development agency Dhaka",
     "BTL activation agency",
     "event exhibition agency Dhaka",
     "content production agency",
@@ -40,6 +42,7 @@ export default function ServicesPage() {
               "Brand Strategy & Design",
               "Creative Advertising & Content Production",
               "Digital & Social Media Marketing",
+              "Web, Mobile & Desktop App Development",
               "Activation, Events & Exhibitions",
             ].map((name, index) => ({
               "@type": "ListItem",
