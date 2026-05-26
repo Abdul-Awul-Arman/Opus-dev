@@ -46,3 +46,7 @@ next-env.d.ts
 # IDEs
 .vscode/
 
+# local design/source exports used during development only
+/SVG 11/
+/SVG 33/
+/svg 44/
